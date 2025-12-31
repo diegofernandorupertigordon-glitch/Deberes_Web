@@ -15,11 +15,21 @@
 <section class="contenido-deber">
 
 <h2>¿Qué son las sentencias de control?</h2>
-<p>Permiten controlar el flujo de ejecución de un programa.</p>
+<p>
+Las sentencias de control permiten dirigir el flujo de ejecución de un programa.
+Gracias a ellas, un sistema puede tomar decisiones, repetir acciones o ejecutar
+bloques de código solo cuando se cumplen ciertas condiciones.
+</p>
 
 <div class="ejemplo">
 <h3>If / Else</h3>
+<p>
+La estructura <strong>if / else</strong> permite ejecutar una acción si una condición es verdadera
+y otra acción si es falsa.
+</p>
 <pre>
+let edad = 20;
+
 if (edad >= 18) {
   console.log("Puede ingresar");
 } else {
@@ -29,7 +39,10 @@ if (edad >= 18) {
 </div>
 
 <div class="ejemplo">
-<h3>For</h3>
+<h3>Bucle For</h3>
+<p>
+El bucle <strong>for</strong> se usa cuando sabemos cuántas veces queremos repetir una acción.
+</p>
 <pre>
 for (let i = 1; i <= 5; i++) {
   console.log(i);
@@ -39,10 +52,16 @@ for (let i = 1; i <= 5; i++) {
 
 <div class="ejercicio">
 <h3>Ejercicio 1</h3>
+<p>
+Crea un programa que determine si una persona puede votar según su edad.
+</p>
 <pre>
 let edad = 20;
-if (edad >= 18) {
- console.log("Puede ingresar");
+
+if (edad >= 16) {
+  console.log("Puede votar");
+} else {
+  console.log("No puede votar");
 }
 </pre>
 </div>
