@@ -1,3 +1,7 @@
+/* ===========================
+   CONFIGURACIÓN GENERAL
+=========================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,103 +9,104 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
     color: #e5e7eb;
+    line-height: 1.7;
 }
 
-/* HERO */
+/* ===========================
+   ENCABEZADO HERO
+=========================== */
+
 .hero {
+    background: linear-gradient(135deg, #020617, #0f172a);
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #020617, #0f172a);
+    border-bottom: 2px solid #38bdf8;
 }
 
 .hero h1 {
     font-size: 3rem;
     color: #38bdf8;
+    text-shadow: 0 0 15px #38bdf8;
 }
 
 .hero p {
     margin-top: 10px;
     font-size: 1.2rem;
-}
-
-.hero span {
-    display: block;
-    margin-top: 8px;
     color: #94a3b8;
 }
 
-/* SECCIONES */
+/* ===========================
+   CONTENIDO
+=========================== */
+
 section {
-    padding: 60px 10%;
+    max-width: 900px;
+    margin: 50px auto;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
 }
 
-h2 {
-    color: #38bdf8;
-    margin-bottom: 25px;
-    font-size: 2rem;
-}
-
-/* SOBRE MI */
-.sobre-mi p {
-    max-width: 700px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-/* GRID DE DEBERES */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* CARDS */
-.card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(56,189,248,0.2);
-    transition: 0.4s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 40px rgba(56,189,248,0.6);
-}
-
-.card h3 {
+section h2 {
     color: #38bdf8;
     margin-bottom: 15px;
 }
 
-.card p {
-    font-size: 0.95rem;
+section h3 {
+    margin-top: 20px;
+    color: #7dd3fc;
+}
+
+section p {
+    margin-bottom: 15px;
     color: #cbd5f5;
-    margin-bottom: 20px;
 }
 
-.card a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: #020617;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* ===========================
+   CÓDIGO
+=========================== */
 
-.card a:hover {
-    background: #0ea5e9;
-    color: white;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
+pre {
     background: #020617;
-    color: #94a3b8;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    color: #7dd3fc;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    border-left: 4px solid #38bdf8;
+}
+
+/* ===========================
+   BOTONES Y LINKS
+=========================== */
+
+a {
+    display: inline-block;
+    margin: 40px auto;
+    text-decoration: none;
+    color: #020617;
+    background: #38bdf8;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #38bdf8;
+}
+
+a:hover {
+    background: #7dd3fc;
+    box-shadow: 0 0 25px #7dd3fc;
+}
+
+/* ===========================
+   EFECTOS
+=========================== */
+
+section:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease;
 }
