@@ -1,8 +1,125 @@
-/* =====================================================
-   BLOQUES DE CÓDIGO (EJEMPLOS DE PROGRAMACIÓN)
-===================================================== */
+/* ===========================
+   CONFIGURACIÓN GENERAL
+=========================== */
 
-pre {
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
+
+section {
+    background: white;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1e3a8a;
+    border-bottom: 3px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* ===========================
+   TARJETAS (CARDS)
+=========================== */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    color: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,200,0.3);
+    transition: 0.3s;
+}
+
+.card h2 {
+    color: #64ffda;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,255,200,0.8);
+}
+
+/* ===========================
+   LISTAS
+=========================== */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+a.button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+a.button:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   BLOQUES DE CÓDIGO (SOLO EN DEBERES Y LECCIONES)
+=========================== */
+
+.contenido-deber pre {
     background: linear-gradient(135deg, #020617, #0f172a);
     color: #e5e7eb;
     padding: 22px;
@@ -15,11 +132,11 @@ pre {
     line-height: 1.6;
 }
 
-/* =====================================================
+/* ===========================
    CONTENEDOR DE EJERCICIOS
-===================================================== */
+=========================== */
 
-.ejercicio {
+.contenido-deber .ejercicio {
     background: linear-gradient(135deg, #ecfeff, #e0f2fe);
     border-left: 8px solid #0284c7;
     padding: 28px;
@@ -29,22 +146,22 @@ pre {
     transition: 0.3s;
 }
 
-.ejercicio:hover {
+.contenido-deber .ejercicio:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.ejercicio h3 {
+.contenido-deber .ejercicio h3 {
     margin-top: 0;
     color: #0369a1;
     font-size: 22px;
 }
 
-/* =====================================================
+/* ===========================
    CONTENEDOR DE EJEMPLOS
-===================================================== */
+=========================== */
 
-.ejemplo {
+.contenido-deber .ejemplo {
     background: linear-gradient(135deg, #f0fdf4, #dcfce7);
     border-left: 8px solid #16a34a;
     padding: 28px;
@@ -54,24 +171,39 @@ pre {
     transition: 0.3s;
 }
 
-.ejemplo:hover {
+.contenido-deber .ejemplo:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.ejemplo h3 {
+.contenido-deber .ejemplo h3 {
     margin-top: 0;
     color: #15803d;
     font-size: 22px;
 }
 
-/* =====================================================
-   TÍTULOS DENTRO DE LOS DEBERES
-===================================================== */
+/* ===========================
+   TÍTULOS DENTRO DE CONTENIDO DEBER
+=========================== */
 
-section h3 {
+.contenido-deber h3 {
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 23px;
     color: #1e293b;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
 }
