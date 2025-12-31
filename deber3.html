@@ -13,14 +13,27 @@
 
 <section class="contenido-deber">
 
+<p>
+La Programación Orientada a Objetos (POO) permite organizar el código usando
+clases y objetos que representan elementos del mundo real.
+</p>
+
 <div class="ejemplo">
 <h3>Clase Persona</h3>
 <pre>
 class Persona {
- constructor(nombre){
-  this.nombre = nombre;
- }
+  constructor(nombre, edad){
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar(){
+    return "Hola, mi nombre es " + this.nombre;
+  }
 }
+
+let persona1 = new Persona("Diego", 18);
+console.log(persona1.saludar());
 </pre>
 </div>
 
