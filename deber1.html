@@ -8,75 +8,45 @@
 <body>
 
 <div class="hero">
-    <h1>🧠 Deber 1 – Sentencias de Control</h1>
-    <p>Fundamentos de Programación</p>
+<h1>🧠 Deber 1 – Sentencias de Control</h1>
+<p>Fundamentos de Programación</p>
 </div>
 
-<section>
+<section class="contenido-deber">
+
 <h2>¿Qué son las sentencias de control?</h2>
-<p>
-Las sentencias de control son estructuras que permiten dirigir el flujo de ejecución de un programa.
-Gracias a ellas, un programa puede tomar decisiones, repetir instrucciones o ejecutar bloques
-de código dependiendo de ciertas condiciones.
-</p>
-<p>
-En programación web, estas sentencias permiten que una página reaccione de forma dinámica según
-la información que el usuario ingresa.
-</p>
-</section>
+<p>Permiten controlar el flujo de ejecución de un programa.</p>
 
-<section>
-<h2>Tipos de sentencias</h2>
-
+<div class="ejemplo">
 <h3>If / Else</h3>
 <pre>
-if (condicion) {
-   // verdadero
+if (edad >= 18) {
+  console.log("Puede ingresar");
 } else {
-   // falso
+  console.log("No puede ingresar");
 }
 </pre>
+</div>
 
-<h3>Switch</h3>
-<pre>
-switch(valor){
- case 1: break;
- default: break;
-}
-</pre>
-
-<h3>While</h3>
-<pre>
-while(condicion){
-}
-</pre>
-
+<div class="ejemplo">
 <h3>For</h3>
 <pre>
-for(let i=0;i<5;i++){
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
 }
 </pre>
-</section>
+</div>
 
-<section>
-<h2>Ejercicios</h2>
-
+<div class="ejercicio">
 <h3>Ejercicio 1</h3>
 <pre>
 let edad = 20;
 if (edad >= 18) {
  console.log("Puede ingresar");
-} else {
- console.log("No puede ingresar");
 }
 </pre>
+</div>
 
-<h3>Ejercicio 2</h3>
-<pre>
-for (let i = 1; i <= 5; i++) {
- console.log(i);
-}
-</pre>
 </section>
 
 <div style="margin:60px;text-align:center;">
