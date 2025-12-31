@@ -1,130 +1,77 @@
-/* ===========================
-   CONFIGURACIÓN GENERAL
-=========================== */
+/* =====================================================
+   BLOQUES DE CÓDIGO (EJEMPLOS DE PROGRAMACIÓN)
+===================================================== */
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-    color: #222;
+pre {
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e5e7eb;
+    padding: 22px;
+    border-radius: 14px;
+    font-size: 15px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 12px rgba(0,255,200,0.15),
+                0 12px 25px rgba(0,0,0,0.25);
+    margin: 25px 0;
+    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: #1a73e8;
-    font-weight: bold;
-}
+/* =====================================================
+   CONTENEDOR DE EJERCICIOS
+===================================================== */
 
-/* ===========================
-   HERO
-=========================== */
-
-.hero {
-    background: linear-gradient(135deg, #0f172a, #1e40af);
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-/* ===========================
-   SECCIONES
-=========================== */
-
-section {
-    background: white;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 35px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #1e3a8a;
-    border-bottom: 3px solid #e5e7eb;
-    padding-bottom: 10px;
-}
-
-/* ===========================
-   TARJETAS (CARDS)
-=========================== */
-
-.menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.card {
-    background: linear-gradient(145deg, #0f172a, #1e293b);
-    color: white;
-    padding: 30px;
+.ejercicio {
+    background: linear-gradient(135deg, #ecfeff, #e0f2fe);
+    border-left: 8px solid #0284c7;
+    padding: 28px;
     border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,255,200,0.3);
+    margin: 40px 0;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
-.card h2 {
-    color: #64ffda;
+.ejercicio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(0,255,200,0.8);
+.ejercicio h3 {
+    margin-top: 0;
+    color: #0369a1;
+    font-size: 22px;
 }
 
-/* ===========================
-   LISTAS
-=========================== */
+/* =====================================================
+   CONTENEDOR DE EJEMPLOS
+===================================================== */
 
-ul {
-    padding-left: 20px;
+.ejemplo {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-left: 8px solid #16a34a;
+    padding: 28px;
+    border-radius: 18px;
+    margin: 35px 0;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-li {
-    margin-bottom: 10px;
-    font-size: 18px;
+.ejemplo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* ===========================
-   BOTONES
-=========================== */
+.ejemplo h3 {
+    margin-top: 0;
+    color: #15803d;
+    font-size: 22px;
+}
 
-a.button {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #2563eb;
-    color: white;
-    border-radius: 10px;
+/* =====================================================
+   TÍTULOS DENTRO DE LOS DEBERES
+===================================================== */
+
+section h3 {
     margin-top: 30px;
-    transition: 0.3s;
-}
-
-a.button:hover {
-    background: #1d4ed8;
-    transform: scale(1.05);
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 30px;
-    }
-    section {
-        margin: 20px;
-        padding: 20px;
-    }
+    margin-bottom: 15px;
+    font-size: 23px;
+    color: #1e293b;
 }
