@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lección 2 – Figma</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<h1>🎨 Lección 2 – Figma: Herramientas de Diseño</h1>
+
+<section>
+<h2>📌 ¿Qué es Figma?</h2>
+<p>
+Figma es una herramienta de diseño de interfaces que permite crear, prototipar y colaborar
+en proyectos de aplicaciones y páginas web en tiempo real.
+</p>
+</section>
+
+<section>
+<h2>🖱️ Herramientas de selección y manipulación</h2>
+
+<h3>Move Tool (V)</h3>
+<p><b>Qué hace:</b> Permite seleccionar y mover objetos.</p>
+<p><b>Cuándo usarlo:</b> Cuando deseas cambiar la posición de un elemento.</p>
+<img src="img/move.png" class="img-ejemplo">
+
+<h3>Scale Tool (K)</h3>
+<p><b>Qué hace:</b> Cambia el tamaño proporcionalmente.</p>
+<p><b>Cuándo usarlo:</b> Para redimensionar botones, imágenes o iconos.</p>
+<img src="img/scale.png" class="img-ejemplo">
+</section>
+
+<section>
+<h2>✏️ Herramientas de dibujo</h2>
+
+<h3>Rectangle (R)</h3>
+<p><b>Qué hace:</b> Crea rectángulos.</p>
+<p><b>Cuándo usarlo:</b> Para botones, tarjetas y contenedores.</p>
+
+<h3>Ellipse (O)</h3>
+<p><b>Qué hace:</b> Crea círculos.</p>
+<p><b>Cuándo usarlo:</b> Para íconos o botones redondos.</p>
+
+<h3>Text (T)</h3>
+<p><b>Qué hace:</b> Agrega texto.</p>
+<p><b>Cuándo usarlo:</b> Para títulos, etiquetas y contenido.</p>
+</section>
+
+<section>
+<h2>📐 Alineación y distribución</h2>
+
+<p><b>Alinear izquierda, centro, derecha:</b> Organiza elementos de forma ordenada.</p>
+<p><b>Distribuir horizontal y vertical:</b> Da espacio uniforme entre objetos.</p>
+</section>
+
+<section>
+<h2>🧩 Componentes y estilos</h2>
+
+<h3>Componentes</h3>
+<p>
+Permiten reutilizar botones, tarjetas y menús sin volver a diseñarlos.
+</p>
+
+<h3>Estilos</h3>
+<p>
+Permiten guardar colores, fuentes y sombras para usarlos en todo el diseño.
+</p>
+</section>
+
+<section>
+<h2>🔗 Prototipado</h2>
+
+<p>
+Permite crear interacciones entre pantallas simulando cómo funcionará la aplicación.
+</p>
+
+<p><b>Ejemplo:</b> Al hacer clic en un botón ir a otra pantalla.</p>
+</section>
+
+<div style="margin:60px;text-align:center;">
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
+</div>
+
+</body>
+</html>
 
