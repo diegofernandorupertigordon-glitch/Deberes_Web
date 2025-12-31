@@ -15,29 +15,23 @@ a {
     font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 /* ===========================
-   HERO (ENCABEZADO)
+   HERO
 =========================== */
 
 .hero {
     background: linear-gradient(135deg, #0f172a, #1e40af);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .hero h1 {
     font-size: 42px;
-    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 18px;
-    opacity: 0.9;
 }
 
 /* ===========================
@@ -46,21 +40,47 @@ a:hover {
 
 section {
     background: white;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 h2 {
     color: #1e3a8a;
     border-bottom: 3px solid #e5e7eb;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
-h3 {
-    color: #1f2937;
+/* ===========================
+   TARJETAS (CARDS)
+=========================== */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+    color: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,200,0.3);
+    transition: 0.3s;
+}
+
+.card h2 {
+    color: #64ffda;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,255,200,0.8);
 }
 
 /* ===========================
@@ -73,72 +93,33 @@ ul {
 
 li {
     margin-bottom: 10px;
-    font-size: 17px;
-}
-
-/* ===========================
-   CÓDIGO
-=========================== */
-
-pre {
-    background: #0f172a;
-    color: #e5e7eb;
-    padding: 15px;
-    border-radius: 10px;
-    overflow-x: auto;
+    font-size: 18px;
 }
 
 /* ===========================
    BOTONES
 =========================== */
 
-a.button, button {
+a.button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 14px 30px;
     background: #2563eb;
     color: white;
-    border-radius: 8px;
-    margin-top: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
     transition: 0.3s;
 }
 
-a.button:hover, button:hover {
+a.button:hover {
     background: #1d4ed8;
     transform: scale(1.05);
-}
-
-/* ===========================
-   TARJETAS DE DEBERES
-=========================== */
-
-ul li a {
-    display: block;
-    background: #f1f5f9;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-ul li a:hover {
-    background: #dbeafe;
-    transform: translateX(5px);
-}
-
-/* ===========================
-   IFRAME VIDEO
-=========================== */
-
-iframe {
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
     .hero h1 {
         font-size: 30px;
     }
