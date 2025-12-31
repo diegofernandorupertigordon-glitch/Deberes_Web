@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Deber 3 – Programación Orientada a Objetos</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="hero">
+<h1>Programación Orientada a Objetos</h1>
+</div>
+
+<section>
+<h2>¿Qué es la POO?</h2>
+<p>
+Es un paradigma de programación que organiza el software en objetos que representan cosas del mundo real.
+</p>
+</section>
+
+<section>
+<h2>Los 4 pilares</h2>
+<ul>
+<li><strong>Encapsulamiento:</strong> proteger los datos</li>
+<li><strong>Herencia:</strong> reutilizar código</li>
+<li><strong>Polimorfismo:</strong> un mismo método, distintos comportamientos</li>
+<li><strong>Abstracción:</strong> mostrar solo lo importante</li>
+</ul>
+</section>
+
+<section>
+<h2>Clases y objetos</h2>
+<pre>
+class Persona {
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+    saludar(){
+        return "Hola " + this.nombre;
+    }
+}
+let p = new Persona("Diego");
+</pre>
+</section>
+
+<section>
+<h2>Ejercicio 1</h2>
+<pre>
+class Auto {
+    constructor(marca){
+        this.marca = marca;
+    }
+}
+</pre>
+
+<h2>Ejercicio 2</h2>
+<pre>
+class Estudiante {
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+    estudiar(){
+        return "Estudiando...";
+    }
+}
+</pre>
+</section>
+
+<section>
+<h2>Video</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allowfullscreen></iframe>
+</div>
+</section>
+
+<a href="index.html">⬅ Volver al inicio</a>
+
+</body>
+</html>
 
