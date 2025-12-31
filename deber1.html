@@ -1,135 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Deber 1 – Sentencias de Control</title>
-    <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<title>Deber 1 – Sentencias de Control</title>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- =========================
-     ENCABEZADO
-========================= -->
 <div class="hero">
-    <h1>Sentencias de Control</h1>
-    <p>Desarrollo Web – Fundamentos de Programación</p>
+    <h1>🧠 Deber 1 – Sentencias de Control</h1>
+    <p>Fundamentos de Programación</p>
 </div>
 
-<!-- =========================
-     SECCIÓN 1 – DEFINICIÓN
-========================= -->
 <section>
-    <h2>¿Qué son las sentencias de control?</h2>
-    <p>
-        Las sentencias de control son estructuras que permiten dirigir el flujo de ejecución de un programa.
-        Gracias a ellas, un programa puede tomar decisiones, repetir instrucciones o ejecutar bloques
-        de código dependiendo de ciertas condiciones.
-    </p>
-    <p>
-        En programación web, estas sentencias permiten que una página reaccione de forma dinámica según
-        la información que el usuario ingresa, como por ejemplo validar un formulario o mostrar mensajes
-        distintos según una condición.
-    </p>
+<h2>¿Qué son las sentencias de control?</h2>
+<p>
+Las sentencias de control son estructuras que permiten dirigir el flujo de ejecución de un programa.
+Gracias a ellas, un programa puede tomar decisiones, repetir instrucciones o ejecutar bloques
+de código dependiendo de ciertas condiciones.
+</p>
+<p>
+En programación web, estas sentencias permiten que una página reaccione de forma dinámica según
+la información que el usuario ingresa.
+</p>
 </section>
 
-<!-- =========================
-     SECCIÓN 2 – TIPOS
-========================= -->
 <section>
-    <h2>Tipos de sentencias de control</h2>
+<h2>Tipos de sentencias</h2>
 
-    <h3>1. if / else</h3>
-    <p>
-        Permite ejecutar un bloque de código si una condición es verdadera y otro si es falsa.
-    </p>
-    <pre>
+<h3>If / Else</h3>
+<pre>
 if (condicion) {
-    // se ejecuta si es verdadera
+   // verdadero
 } else {
-    // se ejecuta si es falsa
+   // falso
 }
-    </pre>
+</pre>
 
-    <h3>2. switch</h3>
-    <p>
-        Se utiliza cuando existen múltiples opciones posibles para una misma variable.
-    </p>
-    <pre>
-switch (variable) {
-    case valor1:
-        // instrucciones
-        break;
-    case valor2:
-        // instrucciones
-        break;
-    default:
-        // si no coincide
+<h3>Switch</h3>
+<pre>
+switch(valor){
+ case 1: break;
+ default: break;
 }
-    </pre>
+</pre>
 
-    <h3>3. while</h3>
-    <p>
-        Repite un bloque de código mientras una condición sea verdadera.
-    </p>
-    <pre>
-while (condicion) {
-    // instrucciones
+<h3>While</h3>
+<pre>
+while(condicion){
 }
-    </pre>
+</pre>
 
-    <h3>4. for</h3>
-    <p>
-        Se utiliza cuando se conoce cuántas veces se repetirá una acción.
-    </p>
-    <pre>
-for (let i = 0; i < 5; i++) {
-    // instrucciones
+<h3>For</h3>
+<pre>
+for(let i=0;i<5;i++){
 }
-    </pre>
+</pre>
 </section>
 
-<!-- =========================
-     SECCIÓN 3 – EJERCICIOS
-========================= -->
 <section>
-    <h2>Ejercicios prácticos</h2>
+<h2>Ejercicios</h2>
 
-    <h3>Ejercicio 1: Verificar si una persona es mayor de edad</h3>
-    <p>
-        En este ejercicio usamos una sentencia <strong>if</strong> para determinar si una persona
-        puede ingresar según su edad.
-    </p>
-    <pre>
+<h3>Ejercicio 1</h3>
+<pre>
 let edad = 20;
-
 if (edad >= 18) {
-    console.log("Puede ingresar");
+ console.log("Puede ingresar");
 } else {
-    console.log("No puede ingresar");
+ console.log("No puede ingresar");
 }
-    </pre>
-    <p>
-        Si la edad es 18 o mayor, el programa mostrará “Puede ingresar”.  
-        Caso contrario mostrará “No puede ingresar”.
-    </p>
+</pre>
 
-    <h3>Ejercicio 2: Mostrar los números del 1 al 5</h3>
-    <p>
-        En este ejemplo utilizamos una sentencia <strong>for</strong> para repetir una acción varias veces.
-    </p>
-    <pre>
+<h3>Ejercicio 2</h3>
+<pre>
 for (let i = 1; i <= 5; i++) {
-    console.log(i);
+ console.log(i);
 }
-    </pre>
-    <p>
-        El ciclo se repite cinco veces y muestra los números del 1 al 5 en la consola.
-    </p>
-
+</pre>
 </section>
 
-<div style="margin: 60px 0; text-align:center;">
-    <a href="index.html" class="button">⬅ Volver al Inicio</a>
+<div style="margin:60px;text-align:center;">
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
 
 </body>
