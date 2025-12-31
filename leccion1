@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lección 1 – Actuación en Clase</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<h1>📊 Lección 1 – Actuación en Clase</h1>
+
+<section>
+<h2>¿Qué es una expresión?</h2>
+<p>
+Una expresión es una combinación de valores, variables y operadores que se evalúa
+para producir un resultado.
+</p>
+
+<h3>Ejemplos:</h3>
+<pre>
+5 + 3
+x * 2
+edad > 18
+</pre>
+</section>
+
+<section>
+<h2>Tipos de Operadores</h2>
+
+<h3>Aritméticos</h3>
+<pre>
++  suma
+-  resta
+*  multiplicación
+/  división
+</pre>
+
+<h3>Relacionales</h3>
+<pre>
+>  mayor que
+<  menor que
+== igual
+!= diferente
+</pre>
+
+<h3>Lógicos</h3>
+<pre>
+&&  AND
+||  OR
+!   NOT
+</pre>
+</section>
+
+<section>
+<h2>🧮 5 Ejercicios sobre Funciones</h2>
+
+<h3>Ejercicio 1</h3>
+<pre>
+function sumar(a,b){
+    return a+b;
+}
+</pre>
+<p>Devuelve la suma de dos números.</p>
+
+<h3>Ejercicio 2</h3>
+<pre>
+function cuadrado(x){
+    return x*x;
+}
+</pre>
+
+<h3>Ejercicio 3</h3>
+<pre>
+function esPar(n){
+    return n % 2 == 0;
+}
+</pre>
+
+<h3>Ejercicio 4</h3>
+<pre>
+function saludo(nombre){
+    return "Hola " + nombre;
+}
+</pre>
+
+<h3>Ejercicio 5</h3>
+<pre>
+function promedio(a,b,c){
+    return (a+b+c)/3;
+}
+</pre>
+
+</section>
+
+<section>
+<h2>🧩 Composable Text Reutilizable (Kotlin - Jetpack Compose)</h2>
+
+<pre>
+@Composable
+fun InfoText(nombre: String, edad: Int, carrera: String){
+    Text("Nombre: $nombre")
+    Text("Edad: $edad")
+    Text("Carrera: $carrera")
+}
+</pre>
+
+<p>
+Este composable permite mostrar datos de una persona de forma reutilizable.
+</p>
+
+</section>
+
+<section>
+<h2>🧮 Calculadora Básica</h2>
+
+<pre>
+function sumar(a,b){ return a+b; }
+function restar(a,b){ return a-b; }
+function multiplicar(a,b){ return a*b; }
+function dividir(a,b){ return a/b; }
+</pre>
+
+<p>
+Estas funciones permiten realizar operaciones matemáticas básicas.
+</p>
+
+</section>
+
+<div style="margin:60px;text-align:center;">
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
+</div>
+
+</body>
+</html>
 
