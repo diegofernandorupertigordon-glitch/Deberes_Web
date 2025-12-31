@@ -2,47 +2,76 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Ejercicios de Sentencias de Control</title>
+<title>Deber 2 – Funciones</title>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-<header class="hero">
-    <h1>Ejercicios Prácticos</h1>
-    <p>Uso de sentencias de control</p>
-</header>
+<div class="hero">
+    <h1>Funciones en Programación</h1>
+    <p>Teoría, ejemplos y ejercicios prácticos</p>
+</div>
 
 <section>
-    <h2>Ejercicio 1 – Verificar si un número es mayor o menor</h2>
-    <p>
-        Este programa verifica si un número es mayor, menor o igual a 10 usando la sentencia <strong>if</strong>.
-    </p>
-
-    <pre>
-int numero = 12;
-
-if (numero > 10) {
-    System.out.println("El número es mayor que 10");
-} else if (numero < 10) {
-    System.out.println("El número es menor que 10");
-} else {
-    System.out.println("El número es igual a 10");
-}
-    </pre>
+<h2>¿Qué son las funciones?</h2>
+<p>
+Una función es un bloque de código que realiza una tarea específica y puede reutilizarse muchas veces.
+Permite organizar mejor un programa, evitar repetir código y hacer que los programas sean más fáciles de entender.
+</p>
 </section>
 
 <section>
-    <h2>Ejercicio 2 – Contar del 1 al 5</h2>
-    <p>
-        Este ejemplo usa la sentencia <strong>for</strong> para mostrar números del 1 al 5.
-    </p>
+<h2>Tipos de funciones</h2>
 
-    <pre>
-for (int i = 1; i <= 5; i++) {
-    System.out.println(i);
+<h3>Función sin parámetros</h3>
+<pre>
+function saludar(){
+    console.log("Hola mundo");
 }
-    </pre>
+</pre>
+
+<h3>Función con parámetros</h3>
+<pre>
+function sumar(a, b){
+    return a + b;
+}
+</pre>
+
+<h3>Función con retorno</h3>
+<pre>
+function cuadrado(x){
+    return x * x;
+}
+</pre>
+</section>
+
+<section>
+<h2>Ejercicio 1</h2>
+<p>Crear una función que calcule el área de un rectángulo.</p>
+<pre>
+function area(base, altura){
+    return base * altura;
+}
+console.log(area(5, 4));
+</pre>
+
+<h2>Ejercicio 2</h2>
+<p>Crear una función que indique si un número es par.</p>
+<pre>
+function esPar(n){
+    return n % 2 === 0;
+}
+console.log(esPar(10));
+</pre>
+</section>
+
+<section>
+<h2>Video explicativo</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://drive.google.com/file/d/ID_DEL_ARCHIVO/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allow="autoplay" allowfullscreen></iframe>
+</div>
 </section>
 
 <a href="index.html">⬅ Volver al inicio</a>
