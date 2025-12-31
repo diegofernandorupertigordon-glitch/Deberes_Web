@@ -1,28 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deber 1 - Sentencias de Control</title>
-    <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<title>Sentencias de Control</title>
+<link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <h1>Deber 1: Sentencias de Control</h1>
-    <h2>1. ¿Qué son?</h2>
-    <p>Permiten controlar el flujo de ejecución de un programa según condiciones o repeticiones.</p>
-    <h2>2. Ejemplos en JavaScript:</h2>
-    <pre>
-let edad = 18;
-if (edad >= 18) {
-    console.log('Mayor de edad');
-} else {
-    console.log('Menor de edad');
-}
 
-for (let i = 1; i <= 5; i++) {
-    console.log('Número ' + i);
+<body>
+
+<header class="hero">
+    <h1>Sentencias de Control</h1>
+    <p>Conceptos y Sintaxis</p>
+</header>
+
+<section>
+    <h2>¿Qué son las sentencias de control?</h2>
+    <p>
+        Las sentencias de control son estructuras que permiten que un programa
+        tome decisiones y controle el flujo de ejecución.
+        Gracias a ellas, el programa puede ejecutar diferentes acciones según una condición
+        o repetir instrucciones varias veces.
+    </p>
+</section>
+
+<section>
+    <h2>Tipos de sentencias de control</h2>
+
+    <h3>1. If</h3>
+    <p>Se usa para ejecutar un bloque de código si una condición es verdadera.</p>
+    <pre>
+if (condicion) {
+    // código a ejecutar
 }
     </pre>
-    <a href="index.html">← Volver al inicio</a>
+
+    <h3>2. If – Else</h3>
+    <p>Permite ejecutar una acción si la condición es verdadera y otra si es falsa.</p>
+    <pre>
+if (condicion) {
+    // código si es verdadero
+} else {
+    // código si es falso
+}
+    </pre>
+
+    <h3>3. Switch</h3>
+    <p>Se utiliza cuando hay muchas opciones posibles.</p>
+    <pre>
+switch (opcion) {
+    case 1:
+        break;
+    case 2:
+        break;
+    default:
+        break;
+}
+    </pre>
+
+    <h3>4. For</h3>
+    <p>Sirve para repetir código una cantidad definida de veces.</p>
+    <pre>
+for (int i = 0; i < 5; i++) {
+    // código que se repite
+}
+    </pre>
+
+    <h3>5. While</h3>
+    <p>Repite el código mientras una condición sea verdadera.</p>
+    <pre>
+while (condicion) {
+    // código que se repite
+}
+    </pre>
+
+</section>
+
+<a href="index.html">⬅ Volver al inicio</a>
+
 </body>
 </html>
