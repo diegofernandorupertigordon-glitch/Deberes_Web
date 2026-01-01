@@ -70,16 +70,18 @@ fun UserInfoText(nombre: String, edad: String, carrera: String) {
 }
 </pre>
 
-<img src="captura8.png"
-     style="max-width:100%; border-radius:8px; margin-top:12px;">
+<p style="text-align:center; margin-top:16px;">
+<strong>📱 Capturas de la app Saludo</strong>
+</p>
 
 <img src="captura9.png"
-     style="max-width:100%; border-radius:8px; margin-top:16px;">
+     style="max-width:100%; border-radius:8px; margin:16px auto; display:block;">
 
-<p style="text-align:center; margin-top:10px;">
-<strong>📱 Capturas de la app Saludo</strong><br><br>
-🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/Saludo.git" target="_blank">Repositorio GitHub</a><br>
-📦 <a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view?usp=drive_link" target="_blank">Descargar APK</a>
+<p style="text-align:center;">
+🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/Saludo.git" target="_blank">
+Repositorio GitHub</a><br>
+📦 <a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view?usp=drive_link" target="_blank">
+Descargar APK</a>
 </p>
 </div>
 
@@ -88,24 +90,46 @@ fun UserInfoText(nombre: String, edad: String, carrera: String) {
 <div class="ejemplo">
 <h3>5️⃣ Calculadora básica</h3>
 
-<pre>
-Sumar, Restar, Multiplicar y Dividir usando Jetpack Compose
-</pre>
-
-<img src="captura10.png"
-     style="max-width:100%; border-radius:8px; margin:20px auto; display:block;">
-
-<p style="text-align:center; margin-bottom:20px;">
-<strong>🧮 Capturas de la app Calculadora</strong><br><br>
-🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/ComposeTercero.git" target="_blank">Repositorio GitHub</a><br>
-📦 <a href="https://drive.google.com/file/d/1YZg_RtpFH6DLlrKJia3pRIKz_IcLAr3k/view?usp=drive_link" target="_blank">Descargar APK</a>
+<p>
+Aplicación Android desarrollada en Jetpack Compose que permite realizar
+operaciones básicas entre dos números.
 </p>
 
-<div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-<img src="captura11.png" style="width:220px; border-radius:8px;">
-<img src="captura12.png" style="width:220px; border-radius:8px;">
-<img src="captura13.png" style="width:220px; border-radius:8px;">
-</div>
+<pre>
+ButtonUi(text = "Sumar") {
+    resultado = "El resultado de la suma es: ${n1 + n2}"
+}
+
+ButtonUi(text = "Restar") {
+    resultado = "El resultado de la resta es: ${n1 - n2}"
+}
+
+ButtonUi(text = "Multiplicar") {
+    resultado = "El resultado de la multiplicación es: ${n1 * n2}"
+}
+
+ButtonUi(text = "Dividir") {
+    resultado = if (n2 != 0.0) {
+        "El resultado de la división es: ${n1 / n2}"
+    } else {
+        "Error: división por 0"
+    }
+}
+</pre>
+
+<p style="text-align:center; margin-top:16px;">
+<strong>🧮 Capturas de la app Calculadora</strong>
+</p>
+
+<img src="captura10.png"
+     style="max-width:100%; border-radius:8px; margin:16px auto; display:block;">
+
+<p style="text-align:center;">
+🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/ComposeTercero.git" target="_blank">
+Repositorio GitHub</a><br>
+📦 <a href="https://drive.google.com/file/d/1YZg_RtpFH6DLlrKJia3pRIKz_IcLAr3k/view?usp=drive_link" target="_blank">
+Descargar APK</a>
+</p>
 
 </div>
 
