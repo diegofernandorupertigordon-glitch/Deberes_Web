@@ -17,46 +17,115 @@
 <div class="ejemplo">
 <h3>¿Qué es una expresión?</h3>
 <p>
-Una expresión es una combinación de valores, variables y operadores que produce
-un resultado.
+Una expresión es una combinación de valores, variables y operadores que se evalúa
+para producir un resultado. Las expresiones son la base de cualquier cálculo en programación,
+ya que permiten tomar decisiones, realizar operaciones matemáticas y comparar datos.
 </p>
 <pre>
 5 + 3
 x * 2
 edad > 18
 </pre>
+
+<p><strong>Ejemplo de resultados:</strong></p>
+<pre>
+5 + 3        → 8
+x * 2        → depende del valor de x
+edad > 18   → true o false
+</pre>
 </div>
 
 <div class="ejemplo">
 <h3>Tipos de Operadores</h3>
+<p>
+Los operadores permiten realizar operaciones entre valores o variables.
+Se dividen principalmente en operadores aritméticos, relacionales y lógicos.
+</p>
+
 <pre>
+Aritméticos
 +   Suma
 -   Resta
 *   Multiplicación
 /   División
 
+Relacionales
 >   Mayor que
 <   Menor que
 ==  Igual
 !=  Diferente
 </pre>
+
+<p><strong>Ejemplo:</strong></p>
+<pre>
+10 + 5      → 15
+8 > 3       → true
+5 == 5      → true
+</pre>
+</div>
+
+<div class="ejemplo">
+<h3>¿Qué es una función?</h3>
+<p>
+Una función es un bloque de código que realiza una tarea específica y puede reutilizarse
+varias veces. Las funciones reciben datos (parámetros), los procesan y devuelven un resultado.
+</p>
+
+<pre>
+function nombreFuncion(parametros){
+  // instrucciones
+  return resultado;
+}
+</pre>
 </div>
 
 <div class="ejercicio">
-<h3>Funciones</h3>
+<h3>Ejercicios de funciones</h3>
+
+<p><strong>Ejercicio 1:</strong> Crear una función que sume dos números.</p>
 <pre>
 function sumar(a,b){
   return a + b;
 }
 
+console.log(sumar(4, 6));
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+10
+</pre>
+
+<p><strong>Ejercicio 2:</strong> Crear una función que calcule el cuadrado de un número.</p>
+<pre>
 function cuadrado(x){
   return x * x;
 }
 
+console.log(cuadrado(5));
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+25
+</pre>
+
+<p><strong>Ejercicio 3:</strong> Crear una función que determine si un número es par.</p>
+<pre>
 function esPar(n){
   return n % 2 == 0;
 }
+
+console.log(esPar(8));
+console.log(esPar(7));
 </pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+true
+false
+</pre>
+
 </div>
 
 </section>
