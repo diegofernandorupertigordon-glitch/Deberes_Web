@@ -67,9 +67,9 @@ Lógicos
 
 <p><strong>Ejemplo:</strong></p>
 <pre>
-10 + 5   → 15
-8 > 3    → true
-true && false → false
+10 + 5           → 15
+8 > 3            → true
+true && false    → false
 </pre>
 </div>
 
@@ -117,7 +117,6 @@ function multiplicar(a, b) {
 }
 </pre>
 <pre>Resultado: 20</pre>
-
 </div>
 
 <!-- ================= TEMA 4 ================= -->
@@ -145,7 +144,11 @@ fun UserInfoText(
 
 <img src="captura8.png"
      alt="Composable UserInfoText"
-     style="max-width:100%; border-radius:8px;">
+     style="max-width:100%; border-radius:8px; margin-top:10px;">
+
+<img src="captura9.png"
+     alt="Composable UserInfoText en ejecución"
+     style="max-width:100%; border-radius:8px; margin-top:10px;">
 </div>
 
 <!-- ================= TEMA 5 ================= -->
@@ -154,17 +157,30 @@ fun UserInfoText(
 <h3>5️⃣ Calculadora básica (2 puntos)</h3>
 
 <p>
-Aplicación Android desarrollada en Jetpack Compose que permite:
-<strong>sumar, restar, multiplicar y dividir</strong>.
+Aplicación Android desarrollada en Jetpack Compose que permite realizar
+<strong>sumas, restas, multiplicaciones y divisiones</strong>, mostrando
+el resultado de forma descriptiva.
 </p>
 
 <pre>
-ButtonUi(text = "Sumar") { resultado = (n1 + n2).toString() }
-ButtonUi(text = "Restar") { resultado = (n1 - n2).toString() }
-ButtonUi(text = "Multiplicar") { resultado = (n1 * n2).toString() }
+ButtonUi(text = "Sumar") {
+  resultado = "El resultado de la suma es: ${n1 + n2}"
+}
+
+ButtonUi(text = "Restar") {
+  resultado = "El resultado de la resta es: ${n1 - n2}"
+}
+
+ButtonUi(text = "Multiplicar") {
+  resultado = "El resultado de la multiplicación es: ${n1 * n2}"
+}
+
 ButtonUi(text = "Dividir") {
-    resultado = if (n2 != 0.0) (n1 / n2).toString()
-    else "Error"
+  resultado = if (n2 != 0.0) {
+    "El resultado de la división es: ${n1 / n2}"
+  } else {
+    "Error: división por 0"
+  }
 }
 </pre>
 
