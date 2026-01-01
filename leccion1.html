@@ -19,7 +19,7 @@
 <p>
 Una expresión es una combinación de valores, variables y operadores que se evalúa
 para producir un resultado. Las expresiones son la base de cualquier cálculo en programación,
-ya que permiten tomar decisiones, realizar operaciones matemáticas y comparar datos.
+ya que permiten realizar operaciones, comparaciones y tomar decisiones.
 </p>
 <pre>
 5 + 3
@@ -39,7 +39,7 @@ edad > 18   → true o false
 <h3>Tipos de Operadores</h3>
 <p>
 Los operadores permiten realizar operaciones entre valores o variables.
-Se dividen principalmente en operadores aritméticos, relacionales y lógicos.
+Los principales tipos son:
 </p>
 
 <pre>
@@ -58,9 +58,9 @@ Relacionales
 
 <p><strong>Ejemplo:</strong></p>
 <pre>
-10 + 5      → 15
-8 > 3       → true
-5 == 5      → true
+10 + 5   → 15
+8 > 3    → true
+5 == 5   → true
 </pre>
 </div>
 
@@ -68,7 +68,7 @@ Relacionales
 <h3>¿Qué es una función?</h3>
 <p>
 Una función es un bloque de código que realiza una tarea específica y puede reutilizarse
-varias veces. Las funciones reciben datos (parámetros), los procesan y devuelven un resultado.
+varias veces. Las funciones reciben datos de entrada, los procesan y devuelven un resultado.
 </p>
 
 <pre>
@@ -79,53 +79,126 @@ function nombreFuncion(parametros){
 </pre>
 </div>
 
-<div class="ejercicio">
-<h3>Ejercicios de funciones</h3>
+<!-- ================= EJERCICIOS PASO A PASO ================= -->
 
-<p><strong>Ejercicio 1:</strong> Crear una función que sume dos números.</p>
+<div class="ejercicio">
+<h3>5 Ejercicios sobre funciones (paso a paso)</h3>
+
+<p><strong>Ejercicio 1: Sumar dos números</strong></p>
+<p>Paso 1: Se reciben dos valores.<br>
+Paso 2: Se realiza la suma.<br>
+Paso 3: Se devuelve el resultado.</p>
 <pre>
-function sumar(a,b){
+function sumar(a, b) {
   return a + b;
 }
 
 console.log(sumar(4, 6));
 </pre>
+<pre>Resultado: 10</pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
+<p><strong>Ejercicio 2: Calcular el cuadrado de un número</strong></p>
+<p>Paso 1: Se recibe un número.<br>
+Paso 2: Se multiplica por sí mismo.<br>
+Paso 3: Se devuelve el valor.</p>
 <pre>
-10
-</pre>
-
-<p><strong>Ejercicio 2:</strong> Crear una función que calcule el cuadrado de un número.</p>
-<pre>
-function cuadrado(x){
+function cuadrado(x) {
   return x * x;
 }
 
 console.log(cuadrado(5));
 </pre>
+<pre>Resultado: 25</pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
+<p><strong>Ejercicio 3: Determinar si un número es par</strong></p>
+<p>Paso 1: Se divide el número para 2.<br>
+Paso 2: Se evalúa el residuo.<br>
+Paso 3: Se devuelve true o false.</p>
 <pre>
-25
-</pre>
-
-<p><strong>Ejercicio 3:</strong> Crear una función que determine si un número es par.</p>
-<pre>
-function esPar(n){
-  return n % 2 == 0;
+function esPar(n) {
+  return n % 2 === 0;
 }
 
 console.log(esPar(8));
 console.log(esPar(7));
 </pre>
-
-<p><strong>Resultado en pantalla:</strong></p>
 <pre>
 true
 false
 </pre>
 
+<p><strong>Ejercicio 4: Restar dos números</strong></p>
+<p>Paso 1: Se reciben dos valores.<br>
+Paso 2: Se resta el segundo al primero.<br>
+Paso 3: Se devuelve el resultado.</p>
+<pre>
+function restar(a, b) {
+  return a - b;
+}
+
+console.log(restar(10, 3));
+</pre>
+<pre>Resultado: 7</pre>
+
+<p><strong>Ejercicio 5: Multiplicar dos números</strong></p>
+<p>Paso 1: Se reciben dos valores.<br>
+Paso 2: Se realiza la multiplicación.<br>
+Paso 3: Se devuelve el resultado.</p>
+<pre>
+function multiplicar(a, b) {
+  return a * b;
+}
+
+console.log(multiplicar(4, 5));
+</pre>
+<pre>Resultado: 20</pre>
+
+</div>
+
+<!-- ================= COMPOSABLE ================= -->
+
+<div class="ejemplo">
+<h3>Composable reutilizable: Mostrar información del usuario</h3>
+<p>
+A continuación se muestra un ejemplo de un composable reutilizable en Jetpack Compose.
+Este componente permite mostrar el nombre, la edad y la carrera de un usuario,
+siguiendo buenas prácticas de reutilización de código.
+</p>
+
+<pre>
+@Composable
+fun UserInfoText(
+    nombre: String,
+    edad: String,
+    carrera: String
+) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        Text(
+            text = "Nombre: $nombre",
+            color = Color(0xFFE5E7EB)
+        )
+        Text(
+            text = "Edad: $edad",
+            color = Color(0xFFE5E7EB)
+        )
+        Text(
+            text = "Carrera: $carrera",
+            color = Color(0xFFE5E7EB)
+        )
+    }
+}
+</pre>
+
+<p>
+Este composable puede reutilizarse en diferentes pantallas de la aplicación,
+permitiendo mostrar información del usuario de forma clara y ordenada.
+</p>
+
+<img src="captura8.png" alt="Composable UserInfoText en Android Studio"
+     style="max-width:100%; height:auto; border-radius:8px; margin-top:10px;">
 </div>
 
 </section>
