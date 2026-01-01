@@ -16,17 +16,36 @@
 
 <h2>¿Qué son las sentencias de control?</h2>
 <p>
-Las sentencias de control permiten dirigir el flujo de ejecución de un programa.
-Gracias a ellas, un sistema puede tomar decisiones, repetir acciones o ejecutar
-bloques de código solo cuando se cumplen ciertas condiciones.
+Las sentencias de control son instrucciones que permiten dirigir el flujo de ejecución de un programa.
+Gracias a ellas, una aplicación puede tomar decisiones, repetir procesos y ejecutar acciones únicamente
+cuando se cumplen ciertas condiciones.  
+En la programación, estas estructuras permiten que un programa no sea una simple lista de instrucciones,
+sino que pueda adaptarse a distintas situaciones, como validar datos, mostrar mensajes, controlar accesos
+o realizar cálculos automáticamente.
 </p>
+
+<p>
+En otras palabras, las sentencias de control hacen que el programa pueda "pensar", decidir qué camino seguir
+y cuántas veces ejecutar una acción.
+</p>
+
+<h2>Sintaxis de las principales sentencias de control</h2>
 
 <div class="ejemplo">
 <h3>If / Else</h3>
 <p>
-La estructura <strong>if / else</strong> permite ejecutar una acción si una condición es verdadera
-y otra acción si es falsa.
+La estructura <strong>if / else</strong> permite ejecutar una acción cuando una condición es verdadera y otra acción
+cuando es falsa.
 </p>
+<pre>
+if (condición) {
+  // Código que se ejecuta si la condición es verdadera
+} else {
+  // Código que se ejecuta si la condición es falsa
+}
+</pre>
+
+<p><strong>Ejemplo:</strong></p>
 <pre>
 let edad = 20;
 
@@ -36,25 +55,74 @@ if (edad >= 18) {
   console.log("No puede ingresar");
 }
 </pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+Puede ingresar
+</pre>
 </div>
 
 <div class="ejemplo">
 <h3>Bucle For</h3>
 <p>
-El bucle <strong>for</strong> se usa cuando sabemos cuántas veces queremos repetir una acción.
+El bucle <strong>for</strong> se utiliza cuando sabemos cuántas veces queremos repetir una acción.
+Consta de tres partes: una variable inicial, una condición y un incremento.
 </p>
+
+<pre>
+for (inicio; condición; incremento) {
+   // Código que se repite
+}
+</pre>
+
+<p><strong>Ejemplo:</strong></p>
 <pre>
 for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
 </pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+1
+2
+3
+4
+5
+</pre>
 </div>
+
+<div class="ejemplo">
+<h3>Bucle While</h3>
+<p>
+El bucle <strong>while</strong> ejecuta un bloque de código mientras una condición sea verdadera.
+</p>
+
+<pre>
+let contador = 1;
+
+while (contador <= 3) {
+  console.log(contador);
+  contador++;
+}
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+1
+2
+3
+</pre>
+</div>
+
+<h2>Ejercicios prácticos</h2>
 
 <div class="ejercicio">
 <h3>Ejercicio 1</h3>
 <p>
 Crea un programa que determine si una persona puede votar según su edad.
 </p>
+
 <pre>
 let edad = 20;
 
@@ -63,6 +131,33 @@ if (edad >= 16) {
 } else {
   console.log("No puede votar");
 }
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+Puede votar
+</pre>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 2</h3>
+<p>
+Crea un programa que muestre los números del 1 al 5 usando un bucle.
+</p>
+
+<pre>
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+1
+2
+3
+4
+5
 </pre>
 </div>
 
