@@ -13,13 +13,38 @@
 
 <section class="contenido-deber">
 
+<h2>¿Qué es una función?</h2>
 <p>
-Una función es un bloque de código que realiza una tarea específica y puede
-reutilizarse tantas veces como sea necesario.
+Una función es un bloque de código que realiza una tarea específica y que puede
+reutilizarse tantas veces como sea necesario dentro de un programa.
+Las funciones permiten organizar mejor el código, evitar repetir instrucciones
+y hacer que los programas sean más fáciles de entender, mantener y modificar.
 </p>
+
+<p>
+Gracias a las funciones, un programa puede dividirse en pequeñas partes que
+resuelven tareas concretas, como calcular valores, mostrar mensajes o procesar datos.
+</p>
+
+<h2>Sintaxis de una función</h2>
+<p>
+Una función en JavaScript se define usando la palabra <strong>function</strong>, seguida del
+nombre de la función, los parámetros entre paréntesis y el bloque de código entre llaves.
+</p>
+
+<pre>
+function nombreFuncion(parametro1, parametro2) {
+  // Código que ejecuta la función
+  return resultado;
+}
+</pre>
 
 <div class="ejemplo">
 <h3>Ejemplo de función</h3>
+<p>
+Esta función recibe dos números, los suma y devuelve el resultado.
+</p>
+
 <pre>
 function sumar(a, b) {
   return a + b;
@@ -27,19 +52,76 @@ function sumar(a, b) {
 
 console.log(sumar(5, 3));
 </pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+8
+</pre>
 </div>
 
+<div class="ejemplo">
+<h3>Función sin parámetros</h3>
+<p>
+Las funciones también pueden existir sin parámetros y simplemente ejecutar una acción.
+</p>
+
+<pre>
+function saludar() {
+  console.log("Hola, bienvenido");
+}
+
+saludar();
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+Hola, bienvenido
+</pre>
+</div>
+
+<h2>Ejercicios prácticos</h2>
+
 <div class="ejercicio">
-<h3>Ejercicio</h3>
+<h3>Ejercicio 1</h3>
 <p>
 Crea una función que reciba un número y devuelva su cuadrado.
 </p>
+
 <pre>
 function cuadrado(x){
   return x * x;
 }
 
 console.log(cuadrado(4));
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+16
+</pre>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 2</h3>
+<p>
+Crea una función que reciba dos números y muestre cuál es el mayor.
+</p>
+
+<pre>
+function mayor(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+console.log(mayor(10, 7));
+</pre>
+
+<p><strong>Resultado en pantalla:</strong></p>
+<pre>
+10
 </pre>
 </div>
 
