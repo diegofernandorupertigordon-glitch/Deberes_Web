@@ -18,41 +18,41 @@
 <p>
 Las sentencias de control son instrucciones que permiten dirigir el flujo de ejecución de un programa.
 Gracias a ellas, una aplicación puede tomar decisiones, repetir procesos y ejecutar acciones únicamente
-cuando se cumplen ciertas condiciones.  
-En la programación, estas estructuras permiten que un programa no sea una simple lista de instrucciones,
-sino que pueda adaptarse a distintas situaciones, como validar datos, mostrar mensajes, controlar accesos
-o realizar cálculos automáticamente.
+cuando se cumplen ciertas condiciones.
 </p>
 
 <p>
-En otras palabras, las sentencias de control hacen que el programa pueda "pensar", decidir qué camino seguir
+En otras palabras, las sentencias de control hacen que el programa pueda decidir qué camino seguir
 y cuántas veces ejecutar una acción.
 </p>
 
 <h2>Sintaxis de las principales sentencias de control</h2>
 
+<!-- ================= IF / ELSE ================= -->
+
 <div class="ejemplo">
-<h3>If / Else</h3>
+<h3>If / Else (Kotlin)</h3>
 <p>
-La estructura <strong>if / else</strong> permite ejecutar una acción cuando una condición es verdadera y otra acción
-cuando es falsa.
+La estructura <strong>if / else</strong> en Kotlin permite ejecutar bloques de código
+según una condición lógica.
 </p>
+
 <pre>
-if (condición) {
-  // Código que se ejecuta si la condición es verdadera
+if (condicion) {
+    // código si es verdadero
 } else {
-  // Código que se ejecuta si la condición es falsa
+    // código si es falso
 }
 </pre>
 
 <p><strong>Ejemplo:</strong></p>
 <pre>
-let edad = 20;
+val edad = 20
 
 if (edad >= 18) {
-  console.log("Puede ingresar");
+    println("Puede ingresar")
 } else {
-  console.log("No puede ingresar");
+    println("No puede ingresar")
 }
 </pre>
 
@@ -62,23 +62,24 @@ Puede ingresar
 </pre>
 </div>
 
+<!-- ================= FOR ================= -->
+
 <div class="ejemplo">
-<h3>Bucle For</h3>
+<h3>Bucle For (Kotlin)</h3>
 <p>
-El bucle <strong>for</strong> se utiliza cuando sabemos cuántas veces queremos repetir una acción.
-Consta de tres partes: una variable inicial, una condición y un incremento.
+El bucle <strong>for</strong> en Kotlin se usa comúnmente con rangos numéricos.
 </p>
 
 <pre>
-for (inicio; condición; incremento) {
-   // Código que se repite
+for (i in inicio..fin) {
+    // código que se repite
 }
 </pre>
 
 <p><strong>Ejemplo:</strong></p>
 <pre>
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
+for (i in 1..5) {
+    println(i)
 }
 </pre>
 
@@ -92,18 +93,20 @@ for (let i = 1; i <= 5; i++) {
 </pre>
 </div>
 
+<!-- ================= WHILE ================= -->
+
 <div class="ejemplo">
-<h3>Bucle While</h3>
+<h3>Bucle While (Kotlin)</h3>
 <p>
-El bucle <strong>while</strong> ejecuta un bloque de código mientras una condición sea verdadera.
+El bucle <strong>while</strong> ejecuta el código mientras la condición sea verdadera.
 </p>
 
 <pre>
-let contador = 1;
+var contador = 1
 
 while (contador <= 3) {
-  console.log(contador);
-  contador++;
+    println(contador)
+    contador++
 }
 </pre>
 
@@ -115,7 +118,9 @@ while (contador <= 3) {
 </pre>
 </div>
 
-<h2>Ejercicios prácticos</h2>
+<h2>Ejercicios prácticos (Kotlin)</h2>
+
+<!-- ================= EJERCICIO 1 ================= -->
 
 <div class="ejercicio">
 <h3>Ejercicio 1</h3>
@@ -124,12 +129,12 @@ Crea un programa que determine si una persona puede votar según su edad.
 </p>
 
 <pre>
-let edad = 20;
+val edad = 20
 
 if (edad >= 16) {
-  console.log("Puede votar");
+    println("Puede votar")
 } else {
-  console.log("No puede votar");
+    println("No puede votar")
 }
 </pre>
 
@@ -139,6 +144,8 @@ Puede votar
 </pre>
 </div>
 
+<!-- ================= EJERCICIO 2 ================= -->
+
 <div class="ejercicio">
 <h3>Ejercicio 2</h3>
 <p>
@@ -146,8 +153,8 @@ Crea un programa que muestre los números del 1 al 5 usando un bucle.
 </p>
 
 <pre>
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
+for (i in 1..5) {
+    println(i)
 }
 </pre>
 
