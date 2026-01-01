@@ -14,20 +14,23 @@
 
 <section class="contenido-deber">
 
+<!-- ================= TEMA 1 ================= -->
+
 <div class="ejemplo">
-<h3>¿Qué es una expresión?</h3>
+<h3>1️⃣ ¿Qué es una expresión?</h3>
 <p>
 Una expresión es una combinación de valores, variables y operadores que se evalúa
 para producir un resultado. Las expresiones son la base de cualquier cálculo en programación,
 ya que permiten realizar operaciones, comparaciones y tomar decisiones.
 </p>
+
 <pre>
 5 + 3
 x * 2
 edad > 18
 </pre>
 
-<p><strong>Ejemplo de resultados:</strong></p>
+<p><strong>Ejemplos:</strong></p>
 <pre>
 5 + 3        → 8
 x * 2        → depende del valor de x
@@ -35,11 +38,12 @@ edad > 18   → true o false
 </pre>
 </div>
 
+<!-- ================= TEMA 2 ================= -->
+
 <div class="ejemplo">
-<h3>Tipos de Operadores</h3>
+<h3>2️⃣ Tipos de Operadores</h3>
 <p>
 Los operadores permiten realizar operaciones entre valores o variables.
-Los principales tipos son:
 </p>
 
 <pre>
@@ -54,115 +58,74 @@ Relacionales
 <   Menor que
 ==  Igual
 !=  Diferente
+
+Lógicos
+&&  AND
+||  OR
+!   NOT
 </pre>
 
 <p><strong>Ejemplo:</strong></p>
 <pre>
 10 + 5   → 15
 8 > 3    → true
-5 == 5   → true
+true && false → false
 </pre>
 </div>
 
-<div class="ejemplo">
-<h3>¿Qué es una función?</h3>
-<p>
-Una función es un bloque de código que realiza una tarea específica y puede reutilizarse
-varias veces. Las funciones reciben datos de entrada, los procesan y devuelven un resultado.
-</p>
-
-<pre>
-function nombreFuncion(parametros){
-  // instrucciones
-  return resultado;
-}
-</pre>
-</div>
-
-<!-- ================= EJERCICIOS PASO A PASO ================= -->
+<!-- ================= TEMA 3 ================= -->
 
 <div class="ejercicio">
-<h3>5 Ejercicios sobre funciones (paso a paso)</h3>
+<h3>3️⃣ 5 Ejercicios sobre funciones (paso a paso)</h3>
 
-<p><strong>Ejercicio 1: Sumar dos números</strong></p>
-<p>Paso 1: Se reciben dos valores.<br>
-Paso 2: Se realiza la suma.<br>
-Paso 3: Se devuelve el resultado.</p>
+<p><strong>Ejercicio 1: Sumar</strong></p>
 <pre>
 function sumar(a, b) {
   return a + b;
 }
-
-console.log(sumar(4, 6));
 </pre>
 <pre>Resultado: 10</pre>
 
-<p><strong>Ejercicio 2: Calcular el cuadrado de un número</strong></p>
-<p>Paso 1: Se recibe un número.<br>
-Paso 2: Se multiplica por sí mismo.<br>
-Paso 3: Se devuelve el valor.</p>
+<p><strong>Ejercicio 2: Cuadrado</strong></p>
 <pre>
 function cuadrado(x) {
   return x * x;
 }
-
-console.log(cuadrado(5));
 </pre>
 <pre>Resultado: 25</pre>
 
-<p><strong>Ejercicio 3: Determinar si un número es par</strong></p>
-<p>Paso 1: Se divide el número para 2.<br>
-Paso 2: Se evalúa el residuo.<br>
-Paso 3: Se devuelve true o false.</p>
+<p><strong>Ejercicio 3: Número par</strong></p>
 <pre>
 function esPar(n) {
   return n % 2 === 0;
 }
-
-console.log(esPar(8));
-console.log(esPar(7));
 </pre>
-<pre>
-true
-false
-</pre>
+<pre>true / false</pre>
 
-<p><strong>Ejercicio 4: Restar dos números</strong></p>
-<p>Paso 1: Se reciben dos valores.<br>
-Paso 2: Se resta el segundo al primero.<br>
-Paso 3: Se devuelve el resultado.</p>
+<p><strong>Ejercicio 4: Restar</strong></p>
 <pre>
 function restar(a, b) {
   return a - b;
 }
-
-console.log(restar(10, 3));
 </pre>
 <pre>Resultado: 7</pre>
 
-<p><strong>Ejercicio 5: Multiplicar dos números</strong></p>
-<p>Paso 1: Se reciben dos valores.<br>
-Paso 2: Se realiza la multiplicación.<br>
-Paso 3: Se devuelve el resultado.</p>
+<p><strong>Ejercicio 5: Multiplicar</strong></p>
 <pre>
 function multiplicar(a, b) {
   return a * b;
 }
-
-console.log(multiplicar(4, 5));
 </pre>
 <pre>Resultado: 20</pre>
 
 </div>
 
-<!-- ================= COMPOSABLE ================= -->
+<!-- ================= TEMA 4 ================= -->
 
 <div class="ejemplo">
-<h3>Composable reutilizable: Mostrar información del usuario</h3>
+<h3>4️⃣ Composable Text reutilizable</h3>
 <p>
-A continuación se muestra un ejemplo de un composable reutilizable en Jetpack Compose.
-Este componente permite mostrar el nombre, la edad y la carrera de un usuario,
-siguiendo buenas prácticas de reutilización de código.
+Composable en Jetpack Compose que muestra nombre, edad y carrera.
 </p>
 
 <pre>
@@ -172,57 +135,64 @@ fun UserInfoText(
     edad: String,
     carrera: String
 ) {
-    Column(
-        modifier = Modifier.padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        Text(
-            text = "Nombre: $nombre",
-            color = Color(0xFFE5E7EB)
-        )
-        Text(
-            text = "Edad: $edad",
-            color = Color(0xFFE5E7EB)
-        )
-        Text(
-            text = "Carrera: $carrera",
-            color = Color(0xFFE5E7EB)
-        )
+    Column {
+        Text("Nombre: $nombre")
+        Text("Edad: $edad")
+        Text("Carrera: $carrera")
     }
 }
 </pre>
 
-<p>
-Este composable puede reutilizarse en diferentes pantallas de la aplicación,
-permitiendo mostrar información del usuario de forma clara y ordenada.
-</p>
-
-<img src="captura8.png" alt="Composable UserInfoText en Android Studio"
-     style="max-width:100%; height:auto; border-radius:8px; margin-top:10px;">
+<img src="captura8.png"
+     alt="Composable UserInfoText"
+     style="max-width:100%; border-radius:8px;">
 </div>
 
-<!-- ================= ENLACES DEL PROYECTO ================= -->
+<!-- ================= TEMA 5 ================= -->
 
 <div class="ejemplo">
-<h3>Repositorio y APK del proyecto</h3>
+<h3>5️⃣ Calculadora básica (2 puntos)</h3>
+
 <p>
-Como evidencia del desarrollo práctico, se incluyen los enlaces al repositorio
-del proyecto y al archivo APK de la aplicación.
+Aplicación Android desarrollada en Jetpack Compose que permite:
+<strong>sumar, restar, multiplicar y dividir</strong>.
 </p>
 
-<p><strong>Repositorio en GitHub:</strong></p>
-<p>
+<pre>
+ButtonUi(text = "Sumar") { resultado = (n1 + n2).toString() }
+ButtonUi(text = "Restar") { resultado = (n1 - n2).toString() }
+ButtonUi(text = "Multiplicar") { resultado = (n1 * n2).toString() }
+ButtonUi(text = "Dividir") {
+    resultado = if (n2 != 0.0) (n1 / n2).toString()
+    else "Error"
+}
+</pre>
+
+<p><strong>Capturas de la aplicación:</strong></p>
+
+<div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+<img src="captura10.png" style="width:220px; border-radius:8px;">
+<img src="captura11.png" style="width:220px; border-radius:8px;">
+<img src="captura12.png" style="width:220px; border-radius:8px;">
+<img src="captura13.png" style="width:220px; border-radius:8px;">
+</div>
+
+</div>
+
+<!-- ================= ENLACES ================= -->
+
+<div class="ejemplo">
+<h3>📎 Repositorio y APK</h3>
+
+<p><strong>GitHub:</strong></p>
 <a href="https://github.com/diegofernandorupertigordon-glitch/Saludo.git" target="_blank">
-https://github.com/diegofernandorupertigordon-glitch/Saludo.git
+Repositorio Saludo
 </a>
-</p>
 
-<p><strong>Descarga del APK (Google Drive):</strong></p>
-<p>
-<a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view?usp=drive_link" target="_blank">
-Descargar aplicación APK
+<p><strong>APK:</strong></p>
+<a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view" target="_blank">
+Descargar APK
 </a>
-</p>
 </div>
 
 </section>
