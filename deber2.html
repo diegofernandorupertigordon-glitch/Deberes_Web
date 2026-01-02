@@ -1,113 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Deber 2 – Funciones</title>
-<link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Deber 2 – Funciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <div class="hero">
-<h1>⚙️ Deber 2 – Funciones</h1>
+    <h1>⚙️ Deber 2 – Funciones</h1>
 </div>
 
 <section class="contenido-deber">
 
-<h2>¿Qué es una función?</h2>
-<p>
-Una función es un bloque de código que realiza una tarea específica y que puede
-reutilizarse tantas veces como sea necesario dentro de un programa.
-Las funciones permiten organizar mejor el código, evitar repetir instrucciones
-y hacer que los programas sean más fáciles de entender, mantener y modificar.
-</p>
+    <!-- ================= VIDEO ================= -->
 
-<p>
-Gracias a las funciones, un programa puede dividirse en pequeñas partes que
-resuelven tareas concretas, como calcular valores, mostrar mensajes o procesar datos.
-</p>
+    <h2>📹 Video de respaldo</h2>
+    <p>
+        A continuación se presenta el enlace al video de respaldo donde se evidencia
+        el funcionamiento de la aplicación desarrollada en Android Studio utilizando
+        Kotlin y Jetpack Compose:
+    </p>
 
-<h2>Sintaxis de una función</h2>
-<p>
-Una función en JavaScript se define usando la palabra <strong>function</strong>, seguida del
-nombre de la función, los parámetros entre paréntesis y el bloque de código entre llaves.
-</p>
+    <p>
+        👉 <a href="https://drive.google.com/file/d/18uGBOuJxRGVEhWNix-aA8sEh2puXNQyX/view?usp=sharing" target="_blank">
+        Ver video de respaldo en Google Drive
+        </a>
+    </p>
 
-<pre>
+    <!-- ================= TEORÍA ================= -->
+
+    <h2>¿Qué es una función?</h2>
+    <p>
+        Una función es un bloque de código que realiza una tarea específica y que puede
+        reutilizarse tantas veces como sea necesario dentro de un programa.
+        Las funciones permiten organizar mejor el código, evitar repetir instrucciones
+        y hacer que los programas sean más fáciles de entender, mantener y modificar.
+    </p>
+
+    <p>
+        Gracias a las funciones, un programa puede dividirse en pequeñas partes que
+        resuelven tareas concretas, como calcular valores, mostrar mensajes o procesar datos.
+    </p>
+
+    <h2>Sintaxis de una función</h2>
+    <p>
+        Una función en JavaScript se define usando la palabra <strong>function</strong>,
+        seguida del nombre de la función, los parámetros entre paréntesis y el bloque de
+        código entre llaves.
+    </p>
+
+    <pre>
 function nombreFuncion(parametro1, parametro2) {
   // Código que ejecuta la función
   return resultado;
 }
-</pre>
+    </pre>
 
-<div class="ejemplo">
-<h3>Ejemplo de función</h3>
-<p>
-Esta función recibe dos números, los suma y devuelve el resultado.
-</p>
+    <!-- ================= EJEMPLOS JS ================= -->
 
-<pre>
+    <div class="ejemplo">
+        <h3>Ejemplo de función</h3>
+        <p>
+            Esta función recibe dos números, los suma y devuelve el resultado.
+        </p>
+
+        <pre>
 function sumar(a, b) {
   return a + b;
 }
 
 console.log(sumar(5, 3));
-</pre>
+        </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-8
-</pre>
-</div>
+        <p><strong>Resultado en pantalla:</strong></p>
+        <pre>8</pre>
+    </div>
 
-<div class="ejemplo">
-<h3>Función sin parámetros</h3>
-<p>
-Las funciones también pueden existir sin parámetros y simplemente ejecutar una acción.
-</p>
+    <div class="ejemplo">
+        <h3>Función sin parámetros</h3>
+        <p>
+            Las funciones también pueden existir sin parámetros y simplemente ejecutar
+            una acción.
+        </p>
 
-<pre>
+        <pre>
 function saludar() {
   console.log("Hola, bienvenido");
 }
 
 saludar();
-</pre>
+        </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-Hola, bienvenido
-</pre>
-</div>
+        <p><strong>Resultado en pantalla:</strong></p>
+        <pre>Hola, bienvenido</pre>
+    </div>
 
-<h2>Ejercicios prácticos</h2>
+    <!-- ================= EJERCICIOS ================= -->
 
-<div class="ejercicio">
-<h3>Ejercicio 1</h3>
-<p>
-Crea una función que reciba un número y devuelva su cuadrado.
-</p>
+    <h2>Ejercicios prácticos</h2>
 
-<pre>
+    <div class="ejercicio">
+        <h3>Ejercicio 1</h3>
+        <p>
+            Crea una función que reciba un número y devuelva su cuadrado.
+        </p>
+
+        <pre>
 function cuadrado(x){
   return x * x;
 }
 
 console.log(cuadrado(4));
-</pre>
+        </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-16
-</pre>
-</div>
+        <p><strong>Resultado en pantalla:</strong></p>
+        <pre>16</pre>
+    </div>
 
-<div class="ejercicio">
-<h3>Ejercicio 2</h3>
-<p>
-Crea una función que reciba dos números y muestre cuál es el mayor.
-</p>
+    <div class="ejercicio">
+        <h3>Ejercicio 2</h3>
+        <p>
+            Crea una función que reciba dos números y muestre cuál es el mayor.
+        </p>
 
-<pre>
+        <pre>
 function mayor(a, b) {
   if (a > b) {
     return a;
@@ -117,54 +134,82 @@ function mayor(a, b) {
 }
 
 console.log(mayor(10, 7));
-</pre>
+        </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-10
-</pre>
-</div>
+        <p><strong>Resultado en pantalla:</strong></p>
+        <pre>10</pre>
+    </div>
 
-<!-- ================= EJEMPLO APLICADO ================= -->
+    <!-- ================= APLICACIÓN REAL ================= -->
 
-<div class="ejemplo">
-<h2>Ejemplo práctico aplicado: Funciones en Android Studio</h2>
+    <div class="ejemplo">
+        <h2>Ejemplo práctico aplicado: Funciones en mi app Android</h2>
 
-<p>
-Como parte del proceso de aprendizaje, las funciones no solo se aplican en JavaScript,
-sino también en el desarrollo de aplicaciones móviles. A continuación se muestra un
-ejemplo de cómo se define y se utiliza una función en Android Studio utilizando
-Jetpack Compose.
-</p>
+        <p>
+            En el desarrollo de mi aplicación de calculadora en Android Studio, las
+            funciones se utilizan tanto para la interfaz gráfica como para la lógica
+            del programa, aplicando los mismos conceptos vistos en la teoría.
+        </p>
 
-<h3>Creación de una función reutilizable</h3>
-<p>
-En esta captura se observa la creación de una función que define un componente de botón
-reutilizable. Esta función encapsula el diseño y el comportamiento del botón, permitiendo
-usarlo en diferentes partes de la aplicación.
-</p>
+        <h3>Función reutilizable para botones</h3>
+        <p>
+            En el siguiente ejemplo se muestra una función escrita en Kotlin usando
+            Jetpack Compose. Esta función crea un botón reutilizable que recibe un texto
+            y una acción a ejecutar cuando el usuario hace clic.
+        </p>
 
-<img src="captura6.png" alt="Creación de función ButtonUi en Android Studio"
-     style="max-width:100%; height:auto; border-radius:8px; margin-top:10px;">
+        <pre>
+@Composable
+fun ButtonUi(text: String, onClick: () -> Unit) {
+    Button(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(text = text)
+    }
+}
+        </pre>
 
-<h3>Uso de la función en la actividad principal</h3>
-<p>
-En esta captura se muestra cómo la función creada es llamada desde la actividad principal.
-El botón ejecuta una acción específica cuando el usuario interactúa con él, demostrando
-la correcta integración de la función dentro de la aplicación.
-</p>
+        <p>
+            Esta función se reutiliza en la aplicación para los botones de
+            <strong>Sumar, Restar, Multiplicar y Dividir</strong>, evitando repetir código.
+        </p>
 
-<img src="captura7.png" alt="Uso de la función ButtonUi en MainActivity"
-     style="max-width:100%; height:auto; border-radius:8px; margin-top:10px;">
+        <h3>Uso de la función para realizar cálculos</h3>
+        <p>
+            A continuación se muestra cómo se utiliza la función al presionar el botón
+            de sumar, donde se procesan los datos ingresados por el usuario.
+        </p>
 
-</div>
+        <pre>
+ButtonUi(text = "Sumar") {
+    val n1 = numero1.toDoubleOrNull() ?: 0.0
+    val n2 = numero2.toDoubleOrNull() ?: 0.0
+    resultado = "El resultado de la suma es: ${n1 + n2}"
+}
+        </pre>
 
-<!-- ================= FIN EJEMPLO ================= -->
+        <p>
+            En este caso, la función ejecuta una operación matemática y muestra el
+            resultado en pantalla, demostrando la aplicación práctica de las funciones
+            en un proyecto real.
+        </p>
+    </div>
+
+    <!-- ================= CONCLUSIÓN ================= -->
+
+    <h2>Conclusión</h2>
+    <p>
+        Las funciones son una parte fundamental de la programación, ya que permiten
+        dividir un programa en partes más pequeñas y organizadas. En este deber se
+        demuestra su uso tanto en JavaScript como en una aplicación real desarrollada
+        en Kotlin con Jetpack Compose.
+    </p>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-<a href="index.html" class="button">⬅ Volver al Inicio</a>
+    <a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
 
 </body>
