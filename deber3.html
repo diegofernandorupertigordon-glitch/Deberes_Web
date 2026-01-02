@@ -37,21 +37,20 @@ La POO se basa en cuatro pilares fundamentales:
 <li><strong>Polimorfismo:</strong> permitir que un método se comporte de diferentes formas.</li>
 </ul>
 
-<h2>Sintaxis de una clase</h2>
+<h2>Sintaxis de una clase en Kotlin</h2>
 <p>
-Una clase se define usando la palabra clave <strong>class</strong>, seguida del nombre de la clase.
-Dentro de ella se definen los atributos y métodos.
+En Kotlin una clase se define con la palabra clave <strong>class</strong>, y los atributos
+se declaran directamente en el constructor.
 </p>
 
 <pre>
-class NombreClase {
-  constructor(parametros) {
-    this.propiedad = valor;
-  }
+class NombreClase(val atributo: Tipo) {
 
-  metodo() {
-    // acción
-  }
+    fun metodo(): Tipo {
+        // acción
+        return valor
+    }
+
 }
 </pre>
 
@@ -63,19 +62,18 @@ y un método que devuelve un saludo.
 </p>
 
 <pre>
-class Persona {
-  constructor(nombre, edad){
-    this.nombre = nombre;
-    this.edad = edad;
-  }
+class Persona(val nombre: String, val edad: Int) {
 
-  saludar(){
-    return "Hola, mi nombre es " + this.nombre;
-  }
+    fun saludar(): String {
+        return "Hola, mi nombre es $nombre"
+    }
+
 }
 
-let persona1 = new Persona("Diego", 18);
-console.log(persona1.saludar());
+fun main() {
+    val persona1 = Persona("Diego", 18)
+    println(persona1.saludar())
+}
 </pre>
 
 <p><strong>Resultado en pantalla:</strong></p>
@@ -94,19 +92,18 @@ un mensaje con esa información.
 </p>
 
 <pre>
-class Auto {
-  constructor(marca, año) {
-    this.marca = marca;
-    this.año = año;
-  }
+class Auto(val marca: String, val anio: Int) {
 
-  info() {
-    return "Auto: " + this.marca + " - Año: " + this.año;
-  }
+    fun info(): String {
+        return "Auto: $marca - Año: $anio"
+    }
+
 }
 
-let miAuto = new Auto("Toyota", 2022);
-console.log(miAuto.info());
+fun main() {
+    val miAuto = Auto("Toyota", 2022)
+    println(miAuto.info())
+}
 </pre>
 
 <p><strong>Resultado en pantalla:</strong></p>
@@ -123,19 +120,18 @@ sus datos.
 </p>
 
 <pre>
-class Estudiante {
-  constructor(nombre, carrera) {
-    this.nombre = nombre;
-    this.carrera = carrera;
-  }
+class Estudiante(val nombre: String, val carrera: String) {
 
-  mostrarDatos() {
-    return "Nombre: " + this.nombre + " | Carrera: " + this.carrera;
-  }
+    fun mostrarDatos(): String {
+        return "Nombre: $nombre | Carrera: $carrera"
+    }
+
 }
 
-let estudiante1 = new Estudiante("Ana", "Desarrollo de Software");
-console.log(estudiante1.mostrarDatos());
+fun main() {
+    val estudiante1 = Estudiante("Ana", "Desarrollo de Software")
+    println(estudiante1.mostrarDatos())
+}
 </pre>
 
 <p><strong>Resultado en pantalla:</strong></p>
