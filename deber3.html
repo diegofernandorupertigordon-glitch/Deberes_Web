@@ -1,49 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Deber 3 – POO</title>
-<link rel="stylesheet" href="css/estilos.css">
+    <meta charset="UTF-8">
+    <title>Deber 3 – POO</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
 <div class="hero">
-<h1>📦 Programación Orientada a Objetos en Kotlin</h1>
+    <h1>📦 Programación Orientada a Objetos en Kotlin</h1>
 </div>
 
 <section class="contenido-deber">
 
-<h2>¿Qué es la Programación Orientada a Objetos?</h2>
-<p>
-La Programación Orientada a Objetos (POO) es un paradigma de programación que permite
-organizar el software utilizando <strong>clases</strong> y <strong>objetos</strong>.
-Cada objeto representa una entidad del mundo real, como una persona, un auto o un producto,
-y contiene datos (atributos) y acciones (métodos).
-</p>
+    <!-- ================= VIDEO DE RESPALDO ================= -->
 
-<p>
-Este enfoque facilita la organización del código, su reutilización y su mantenimiento,
-haciendo que los programas sean más claros, ordenados y escalables.
-</p>
+    <h2>📹 Video de respaldo</h2>
+    <p>
+        En el siguiente enlace se muestra el video de respaldo donde se evidencian
+        las actividades realizadas sobre Programación Orientada a Objetos en Kotlin.
+    </p>
 
-<h2>Conceptos principales</h2>
-<p>
-La POO se basa en cuatro pilares fundamentales:
-</p>
-<ul>
-<li><strong>Encapsulamiento:</strong> los datos se mantienen dentro de la clase.</li>
-<li><strong>Abstracción:</strong> se muestra solo lo necesario del objeto.</li>
-<li><strong>Herencia:</strong> una clase puede heredar de otra.</li>
-<li><strong>Polimorfismo:</strong> un método puede comportarse de forma diferente.</li>
-</ul>
+    <p>
+        👉 <a href="https://drive.google.com/file/d/18uGBOuJxRGVEhWNix-aA8sEh2puXNQyX/view?usp=sharing" target="_blank">
+        Ver video de respaldo de Programación Orientada a Objetos
+        </a>
+    </p>
 
-<h2>Sintaxis de una clase en Kotlin</h2>
-<p>
-En Kotlin una clase se define con la palabra clave <strong>class</strong> y los atributos se
-declaran directamente en el constructor.
-</p>
+    <!-- ================= IMAGEN ================= -->
 
-<pre>
+    <h2>📸 Evidencia gráfica</h2>
+    <p>
+        A continuación se muestra una imagen representativa del uso de clases,
+        objetos y herencia en la aplicación desarrollada.
+    </p>
+
+    <img src="POO.png" alt="Ejemplo de Programación Orientada a Objetos en Kotlin"
+         style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
+
+    <!-- ================= TEORÍA ================= -->
+
+    <h2>¿Qué es la Programación Orientada a Objetos?</h2>
+    <p>
+        La Programación Orientada a Objetos (POO) es un paradigma de programación que permite
+        organizar el software utilizando <strong>clases</strong> y <strong>objetos</strong>.
+        Cada objeto representa una entidad del mundo real, como una persona, un auto o un producto,
+        y contiene datos (atributos) y acciones (métodos).
+    </p>
+
+    <p>
+        Este enfoque facilita la organización del código, su reutilización y su mantenimiento,
+        haciendo que los programas sean más claros, ordenados y escalables.
+    </p>
+
+    <h2>Conceptos principales</h2>
+    <p>
+        La POO se basa en cuatro pilares fundamentales:
+    </p>
+    <ul>
+        <li><strong>Encapsulamiento:</strong> los datos se mantienen dentro de la clase.</li>
+        <li><strong>Abstracción:</strong> se muestra solo lo necesario del objeto.</li>
+        <li><strong>Herencia:</strong> una clase puede heredar de otra.</li>
+        <li><strong>Polimorfismo:</strong> un método puede comportarse de forma diferente.</li>
+    </ul>
+
+    <h2>Sintaxis de una clase en Kotlin</h2>
+    <p>
+        En Kotlin una clase se define con la palabra clave <strong>class</strong> y los atributos se
+        declaran directamente en el constructor.
+    </p>
+
+    <pre>
 class NombreClase(val atributo: Tipo) {
 
     fun metodo(): Tipo {
@@ -51,16 +78,18 @@ class NombreClase(val atributo: Tipo) {
     }
 
 }
-</pre>
+    </pre>
 
-<div class="ejemplo">
-<h3>Clase Persona (Kotlin)</h3>
-<p>
-Esta clase representa a una persona. Tiene nombre y edad, y un método que devuelve
-una descripción del objeto.
-</p>
+    <!-- ================= PERSONA ================= -->
 
-<pre>
+    <div class="ejemplo">
+        <h3>Clase Persona (Kotlin)</h3>
+        <p>
+            Esta clase representa a una persona. Tiene nombre y edad, y un método que devuelve
+            una descripción del objeto.
+        </p>
+
+        <pre>
 open class Persona(
     val nombre: String,
     val edad: Int
@@ -69,30 +98,32 @@ open class Persona(
         return "Persona -> Nombre: $nombre, Edad: $edad"
     }
 }
-</pre>
+        </pre>
 
-<p><strong>Ejemplo de uso:</strong></p>
-<pre>
+        <p><strong>Ejemplo de uso:</strong></p>
+        <pre>
 val persona = Persona("Carlos", 40)
 println(persona.descripcion())
-</pre>
+        </pre>
 
-<p><strong>Resultado en Logcat:</strong></p>
-<pre>
+        <p><strong>Resultado en Logcat:</strong></p>
+        <pre>
 Persona -> Nombre: Carlos, Edad: 40
-</pre>
-</div>
+        </pre>
+    </div>
 
-<h2>Herencia y Polimorfismo</h2>
+    <!-- ================= HERENCIA ================= -->
 
-<div class="ejemplo">
-<h3>Clase Estudiante (hereda de Persona)</h3>
-<p>
-La clase Estudiante hereda de Persona. Además de nombre y edad, tiene la propiedad
-carrera y cambia el comportamiento del método descripcion().
-</p>
+    <h2>Herencia y Polimorfismo</h2>
 
-<pre>
+    <div class="ejemplo">
+        <h3>Clase Estudiante (hereda de Persona)</h3>
+        <p>
+            La clase Estudiante hereda de Persona. Además de nombre y edad, tiene la propiedad
+            carrera y cambia el comportamiento del método descripcion().
+        </p>
+
+        <pre>
 class Estudiante(
     nombre: String,
     edad: Int,
@@ -103,29 +134,31 @@ class Estudiante(
         return "Estudiante -> Nombre: $nombre, Carrera: $carrera"
     }
 }
-</pre>
+        </pre>
 
-<p><strong>Ejemplo de uso:</strong></p>
-<pre>
+        <p><strong>Ejemplo de uso:</strong></p>
+        <pre>
 val estudiante = Estudiante("Ana", 20, "Software")
 println(estudiante.descripcion())
-</pre>
+        </pre>
 
-<p><strong>Resultado en Logcat:</strong></p>
-<pre>
+        <p><strong>Resultado en Logcat:</strong></p>
+        <pre>
 Estudiante -> Nombre: Ana, Carrera: Software
-</pre>
-</div>
+        </pre>
+    </div>
 
-<h2>Ejercicios prácticos</h2>
+    <!-- ================= EJERCICIOS ================= -->
 
-<div class="ejercicio">
-<h3>Ejercicio 1 – Clase Auto</h3>
-<p>
-La clase Auto representa un vehículo. Tiene marca y año, y un método que devuelve su información.
-</p>
+    <h2>Ejercicios prácticos</h2>
 
-<pre>
+    <div class="ejercicio">
+        <h3>Ejercicio 1 – Clase Auto</h3>
+        <p>
+            La clase Auto representa un vehículo. Tiene marca y año, y un método que devuelve su información.
+        </p>
+
+        <pre>
 class Auto(
     val marca: String,
     val anio: Int
@@ -134,28 +167,28 @@ class Auto(
         return "Auto -> Marca: $marca, Año: $anio"
     }
 }
-</pre>
+        </pre>
 
-<p><strong>Ejemplo de uso:</strong></p>
-<pre>
+        <p><strong>Ejemplo de uso:</strong></p>
+        <pre>
 val auto = Auto("Toyota", 2022)
 println(auto.info())
-</pre>
+        </pre>
 
-<p><strong>Resultado en Logcat:</strong></p>
-<pre>
+        <p><strong>Resultado en Logcat:</strong></p>
+        <pre>
 Auto -> Marca: Toyota, Año: 2022
-</pre>
-</div>
+        </pre>
+    </div>
 
-<div class="ejercicio">
-<h3>Ejercicio 2 – Uso de todas las clases</h3>
-<p>
-En la aplicación Android se crean objetos de todas las clases y se muestran sus datos
-en Logcat.
-</p>
+    <div class="ejercicio">
+        <h3>Ejercicio 2 – Uso de todas las clases</h3>
+        <p>
+            En la aplicación Android se crean objetos de todas las clases y se muestran sus datos
+            en Logcat.
+        </p>
 
-<pre>
+        <pre>
 val persona = Persona("Carlos", 40)
 val estudiante = Estudiante("Ana", 20, "Software")
 val auto = Auto("Toyota", 2022)
@@ -163,20 +196,20 @@ val auto = Auto("Toyota", 2022)
 println(persona.descripcion())
 println(estudiante.descripcion())
 println(auto.info())
-</pre>
+        </pre>
 
-<p><strong>Resultado en Logcat:</strong></p>
-<pre>
+        <p><strong>Resultado en Logcat:</strong></p>
+        <pre>
 Persona -> Nombre: Carlos, Edad: 40
 Estudiante -> Nombre: Ana, Carrera: Software
 Auto -> Marca: Toyota, Año: 2022
-</pre>
-</div>
+        </pre>
+    </div>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-<a href="index.html" class="button">⬅ Volver al Inicio</a>
+    <a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
 
 </body>
