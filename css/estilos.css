@@ -207,5 +207,21 @@ a.button:hover {
         padding: 20px;
     }
 }
+/* ===== Galería App Utility ===== */
+.galeria {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    background: #020617;
+    padding: 8px;
+    border-radius: 12px;
+}
 
 
