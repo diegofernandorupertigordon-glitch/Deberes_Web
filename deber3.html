@@ -8,7 +8,7 @@
 <body>
 
 <div class="hero">
-<h1>📦 Programación Orientada a Objetos</h1>
+<h1>📦 Programación Orientada a Objetos en Kotlin</h1>
 </div>
 
 <section class="contenido-deber">
@@ -23,7 +23,7 @@ y contiene datos (atributos) y acciones (métodos).
 
 <p>
 Este enfoque facilita la organización del código, su reutilización y su mantenimiento,
-haciendo que los programas sean más claros y escalables.
+haciendo que los programas sean más claros, ordenados y escalables.
 </p>
 
 <h2>Conceptos principales</h2>
@@ -31,23 +31,22 @@ haciendo que los programas sean más claros y escalables.
 La POO se basa en cuatro pilares fundamentales:
 </p>
 <ul>
-<li><strong>Encapsulamiento:</strong> proteger los datos dentro de un objeto.</li>
-<li><strong>Abstracción:</strong> mostrar solo lo necesario del objeto.</li>
-<li><strong>Herencia:</strong> permitir que una clase herede características de otra.</li>
-<li><strong>Polimorfismo:</strong> permitir que un método se comporte de diferentes formas.</li>
+<li><strong>Encapsulamiento:</strong> los datos se mantienen dentro de la clase.</li>
+<li><strong>Abstracción:</strong> se muestra solo lo necesario del objeto.</li>
+<li><strong>Herencia:</strong> una clase puede heredar de otra.</li>
+<li><strong>Polimorfismo:</strong> un método puede comportarse de forma diferente.</li>
 </ul>
 
 <h2>Sintaxis de una clase en Kotlin</h2>
 <p>
-En Kotlin una clase se define con la palabra clave <strong>class</strong>, y los atributos
-se declaran directamente en el constructor.
+En Kotlin una clase se define con la palabra clave <strong>class</strong> y los atributos se
+declaran directamente en el constructor.
 </p>
 
 <pre>
 class NombreClase(val atributo: Tipo) {
 
     fun metodo(): Tipo {
-        // acción
         return valor
     }
 
@@ -55,88 +54,122 @@ class NombreClase(val atributo: Tipo) {
 </pre>
 
 <div class="ejemplo">
-<h3>Clase Persona</h3>
+<h3>Clase Persona (Kotlin)</h3>
 <p>
-Este ejemplo muestra una clase que representa a una persona, con un nombre y una edad,
-y un método que devuelve un saludo.
+Esta clase representa a una persona. Tiene nombre y edad, y un método que devuelve
+una descripción del objeto.
 </p>
 
 <pre>
-class Persona(val nombre: String, val edad: Int) {
-
-    fun saludar(): String {
-        return "Hola, mi nombre es $nombre"
+open class Persona(
+    val nombre: String,
+    val edad: Int
+) {
+    open fun descripcion(): String {
+        return "Persona -> Nombre: $nombre, Edad: $edad"
     }
-
-}
-
-fun main() {
-    val persona1 = Persona("Diego", 18)
-    println(persona1.saludar())
 }
 </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
+<p><strong>Ejemplo de uso:</strong></p>
 <pre>
-Hola, mi nombre es Diego
+val persona = Persona("Carlos", 40)
+println(persona.descripcion())
+</pre>
+
+<p><strong>Resultado en Logcat:</strong></p>
+<pre>
+Persona -> Nombre: Carlos, Edad: 40
+</pre>
+</div>
+
+<h2>Herencia y Polimorfismo</h2>
+
+<div class="ejemplo">
+<h3>Clase Estudiante (hereda de Persona)</h3>
+<p>
+La clase Estudiante hereda de Persona. Además de nombre y edad, tiene la propiedad
+carrera y cambia el comportamiento del método descripcion().
+</p>
+
+<pre>
+class Estudiante(
+    nombre: String,
+    edad: Int,
+    val carrera: String
+) : Persona(nombre, edad) {
+
+    override fun descripcion(): String {
+        return "Estudiante -> Nombre: $nombre, Carrera: $carrera"
+    }
+}
+</pre>
+
+<p><strong>Ejemplo de uso:</strong></p>
+<pre>
+val estudiante = Estudiante("Ana", 20, "Software")
+println(estudiante.descripcion())
+</pre>
+
+<p><strong>Resultado en Logcat:</strong></p>
+<pre>
+Estudiante -> Nombre: Ana, Carrera: Software
 </pre>
 </div>
 
 <h2>Ejercicios prácticos</h2>
 
 <div class="ejercicio">
-<h3>Ejercicio 1</h3>
+<h3>Ejercicio 1 – Clase Auto</h3>
 <p>
-Crea una clase llamada <strong>Auto</strong> que tenga una marca y un año, y un método que muestre
-un mensaje con esa información.
+La clase Auto representa un vehículo. Tiene marca y año, y un método que devuelve su información.
 </p>
 
 <pre>
-class Auto(val marca: String, val anio: Int) {
-
+class Auto(
+    val marca: String,
+    val anio: Int
+) {
     fun info(): String {
-        return "Auto: $marca - Año: $anio"
+        return "Auto -> Marca: $marca, Año: $anio"
     }
-
-}
-
-fun main() {
-    val miAuto = Auto("Toyota", 2022)
-    println(miAuto.info())
 }
 </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
+<p><strong>Ejemplo de uso:</strong></p>
 <pre>
-Auto: Toyota - Año: 2022
+val auto = Auto("Toyota", 2022)
+println(auto.info())
+</pre>
+
+<p><strong>Resultado en Logcat:</strong></p>
+<pre>
+Auto -> Marca: Toyota, Año: 2022
 </pre>
 </div>
 
 <div class="ejercicio">
-<h3>Ejercicio 2</h3>
+<h3>Ejercicio 2 – Uso de todas las clases</h3>
 <p>
-Crea una clase llamada <strong>Estudiante</strong> con nombre y carrera, y un método que muestre
-sus datos.
+En la aplicación Android se crean objetos de todas las clases y se muestran sus datos
+en Logcat.
 </p>
 
 <pre>
-class Estudiante(val nombre: String, val carrera: String) {
+val persona = Persona("Carlos", 40)
+val estudiante = Estudiante("Ana", 20, "Software")
+val auto = Auto("Toyota", 2022)
 
-    fun mostrarDatos(): String {
-        return "Nombre: $nombre | Carrera: $carrera"
-    }
-
-}
-
-fun main() {
-    val estudiante1 = Estudiante("Ana", "Desarrollo de Software")
-    println(estudiante1.mostrarDatos())
-}
+println(persona.descripcion())
+println(estudiante.descripcion())
+println(auto.info())
 </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
+<p><strong>Resultado en Logcat:</strong></p>
 <pre>
-Nombre: Ana | Carrera: Desarrollo de Software
+Persona -> Nombre: Carlos, Edad: 40
+Estudiante -> Nombre: Ana, Carrera: Software
+Auto -> Marca: Toyota, Año: 2022
 </pre>
 </div>
 
