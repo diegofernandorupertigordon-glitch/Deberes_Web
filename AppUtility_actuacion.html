@@ -4,30 +4,8 @@
 <meta charset="UTF-8">
 <title>AppUtility</title>
 <link rel="stylesheet" href="css/estilos.css">
-
-<style>
-/* ===== GALERÍA DE IMÁGENES ===== */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.galeria img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-</style>
-
 </head>
+
 <body>
 
 <div class="hero">
@@ -62,32 +40,72 @@
 
     <p>
       <strong>Descarga del APK (acceso público):</strong><br>
-      <a href="https://drive.google.com/file/d/1yaSA2qe-VEtlRrpz_e-2rmsCCZUJ-79V/view?usp=drive_link"
-         target="_blank">
+      <a href="https://drive.google.com/file/d/1yaSA2qe-VEtlRrpz_e-2rmsCCZUJ-79V/view?usp=drive_link" target="_blank">
         Descargar APK – App Utility
       </a>
     </p>
 
     <p style="margin-top:15px;">
       <strong>🎥 Video explicativo de las características:</strong><br>
-      <a href="https://drive.google.com/file/d/1W1A7G1bpDJEtZvsikMrRgP_t6B2fIykl/view?usp=sharing"
-         target="_blank">
+      <a href="https://drive.google.com/file/d/1W1A7G1bpDJEtZvsikMrRgP_t6B2fIykl/view?usp=sharing" target="_blank">
         Ver video de la aplicación
       </a>
     </p>
   </div>
 
+  <!-- GALERÍA -->
   <div class="ejemplo">
     <h3>🖼️ Capturas de Respaldo de la Aplicación</h3>
 
     <div class="galeria">
-      <img src="captura18.png" alt="Captura 18 - App Utility">
-      <img src="captura19.png" alt="Captura 19 - App Utility">
-      <img src="captura20.png" alt="Captura 20 - App Utility">
-      <img src="captura21.png" alt="Captura 21 - App Utility">
-      <img src="captura22.png" alt="Captura 22 - App Utility">
-      <img src="captura23.png" alt="Captura 23 - App Utility">
+      <img src="captura18.png" alt="Captura 18">
+      <img src="captura19.png" alt="Captura 19">
+      <img src="captura20.png" alt="Captura 20">
+      <img src="captura21.png" alt="Captura 21">
+      <img src="captura22.png" alt="Captura 22">
+      <img src="captura23.png" alt="Captura 23">
     </div>
+  </div>
+
+  <!-- RESPALDO TÉCNICO -->
+  <div class="ejemplo">
+    <h3>💻 Evidencia Técnica del Desarrollo</h3>
+
+<pre>
+class MainActivity : ComponentActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    enableEdgeToEdge()
+    setContent { UtilityApp() }
+  }
+}
+</pre>
+
+<pre>
+@Composable
+fun UtilityApp() {
+  SaludoTheme {
+    val navController = rememberNavController()
+    FuturisticContainer {
+      NavGraph(navController)
+    }
+  }
+}
+</pre>
+
+<pre>
+MenuCard("Calculadora", Icons.Filled.Calculate) {
+  navController.navigate(Routes.Calculadora.route)
+}
+</pre>
+
+<pre>
+NavHost(navController, startDestination = Routes.Splash.route) {
+  composable(Routes.Login.route) { LoginScreen(navController) }
+  composable(Routes.Main.route) { MainScreen(navController) }
+  composable(Routes.Calculadora.route) { CalculadoraScreen() }
+}
+</pre>
 
   </div>
 
