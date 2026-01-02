@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>Deber 2 – Funciones</title>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Estilo solo para las capturas -->
+    <style>
+        .capturas {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .capturas img {
+            width: 45%;
+            max-width: 400px;
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -27,6 +44,14 @@
         Ver video de respaldo en Google Drive
         </a>
     </p>
+
+    <!-- ================= CAPTURAS ================= -->
+
+    <h2>📸 Evidencias de la aplicación</h2>
+    <div class="capturas">
+        <img src="captura6.png" alt="Captura 6 de la aplicación">
+        <img src="captura7.png" alt="Captura 7 de la aplicación">
+    </div>
 
     <!-- ================= TEORÍA ================= -->
 
@@ -138,62 +163,6 @@ console.log(mayor(10, 7));
 
         <p><strong>Resultado en pantalla:</strong></p>
         <pre>10</pre>
-    </div>
-
-    <!-- ================= APLICACIÓN REAL ================= -->
-
-    <div class="ejemplo">
-        <h2>Ejemplo práctico aplicado: Funciones en mi app Android</h2>
-
-        <p>
-            En el desarrollo de mi aplicación de calculadora en Android Studio, las
-            funciones se utilizan tanto para la interfaz gráfica como para la lógica
-            del programa, aplicando los mismos conceptos vistos en la teoría.
-        </p>
-
-        <h3>Función reutilizable para botones</h3>
-        <p>
-            En el siguiente ejemplo se muestra una función escrita en Kotlin usando
-            Jetpack Compose. Esta función crea un botón reutilizable que recibe un texto
-            y una acción a ejecutar cuando el usuario hace clic.
-        </p>
-
-        <pre>
-@Composable
-fun ButtonUi(text: String, onClick: () -> Unit) {
-    Button(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Text(text = text)
-    }
-}
-        </pre>
-
-        <p>
-            Esta función se reutiliza en la aplicación para los botones de
-            <strong>Sumar, Restar, Multiplicar y Dividir</strong>, evitando repetir código.
-        </p>
-
-        <h3>Uso de la función para realizar cálculos</h3>
-        <p>
-            A continuación se muestra cómo se utiliza la función al presionar el botón
-            de sumar, donde se procesan los datos ingresados por el usuario.
-        </p>
-
-        <pre>
-ButtonUi(text = "Sumar") {
-    val n1 = numero1.toDoubleOrNull() ?: 0.0
-    val n2 = numero2.toDoubleOrNull() ?: 0.0
-    resultado = "El resultado de la suma es: ${n1 + n2}"
-}
-        </pre>
-
-        <p>
-            En este caso, la función ejecuta una operación matemática y muestra el
-            resultado en pantalla, demostrando la aplicación práctica de las funciones
-            en un proyecto real.
-        </p>
     </div>
 
     <!-- ================= CONCLUSIÓN ================= -->
