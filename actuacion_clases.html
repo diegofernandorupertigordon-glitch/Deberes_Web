@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Actuación en Clases – App Utility</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="hero">
+  <h1>📱 Actuación en Clases</h1>
+  <p>Aplicación Android – Utility App</p>
+</div>
+
+<section class="contenido-deber">
+
+  <!-- ================= INTRO ================= -->
+
+  <div class="ejemplo">
+    <h3>Descripción General</h3>
+    <p>
+      Durante la actuación en clases se presentó la aplicación móvil
+      <strong>Utility</strong>, desarrollada con <strong>Android + Jetpack Compose</strong>,
+      aplicando navegación, autenticación, componentes reutilizables y un diseño
+      futurista basado en Material 3.
+    </p>
+  </div>
+
+  <!-- ================= ARQUITECTURA ================= -->
+
+  <div class="ejemplo">
+    <h3>Arquitectura de la Aplicación</h3>
+    <p>
+      La app utiliza una arquitectura moderna basada en:
+    </p>
+    <ul>
+      <li>Jetpack Compose</li>
+      <li>Navegación con NavGraph</li>
+      <li>ViewModel</li>
+      <li>Componentes reutilizables</li>
+    </ul>
+
+<pre><code>
+// Punto de entrada de la aplicación
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            UtilityApp()
+        }
+    }
+}
+</code></pre>
+  </div>
+
+  <!-- ================= PANTALLA PRINCIPAL ================= -->
+
+  <div class="ejemplo">
+    <h3>Pantalla Principal (Menú de Utilidades)</h3>
+    <p>
+      La pantalla principal presenta un menú con diferentes herramientas
+      accesibles mediante tarjetas animadas.
+    </p>
+
+<pre><code>
+MenuCard("Calculadora", Icons.Filled.Calculate) {
+    navController.navigate(Routes.Calculadora.route)
+}
+
+MenuCard("Verificar Edad", Icons.Filled.Person) {
+    navController.navigate(Routes.Edad.route)
+}
+</code></pre>
+
+    <p>
+      Cada opción redirige a una funcionalidad específica usando navegación segura.
+    </p>
+  </div>
+
+  <!-- ================= DISEÑO FUTURISTA ================= -->
+
+  <div class="ejemplo">
+    <h3>Diseño Futurista</h3>
+    <p>
+      La aplicación implementa un diseño futurista con:
+    </p>
+    <ul>
+      <li>Fondos degradados</li>
+      <li>Efectos glow</li>
+      <li>Animaciones suaves</li>
+    </ul>
+
+<pre><code>
+Box(
+    modifier = Modifier
+        .fillMaxSize()
+        .background(
+            Brush.verticalGradient(
+                listOf(Color(0xFF020617), Color(0xFF0F172A))
+            )
+        )
+)
+</code></pre>
+  </div>
+
+  <!-- ================= AUTENTICACIÓN ================= -->
+
+  <div class="ejemplo">
+    <h3>Autenticación de Usuarios</h3>
+    <p>
+      La app incluye pantallas de <strong>Login</strong> y <strong>Registro</strong>,
+      con validaciones visuales y control de errores.
+    </p>
+
+<pre><code>
+if (!emailError && !passwordError) {
+    authViewModel.login(email, password) {
+        navController.navigate(Routes.Main.route)
+    }
+}
+</code></pre>
+  </div>
+
+  <!-- ================= COMPONENTES ================= -->
+
+  <div class="ejemplo">
+    <h3>Componentes Reutilizables</h3>
+    <p>
+      Para mantener un código limpio y escalable, se crearon componentes
+      reutilizables como botones y campos de texto futuristas.
+    </p>
+
+<pre><code>
+@Composable
+fun FuturisticButton(
+    text: String,
+    onClick: () -> Unit
+)
+</code></pre>
+  </div>
+
+  <!-- ================= CONCLUSIÓN ================= -->
+
+  <div class="ejercicio">
+    <h3>Conclusión</h3>
+    <p>
+      La aplicación Utility demuestra la aplicación práctica de los conceptos
+      vistos en clase, combinando lógica, navegación, diseño moderno y buenas
+      prácticas de desarrollo en Android.
+    </p>
+  </div>
+
+</section>
+
+<div style="margin:60px;text-align:center;">
+  <a href="index.html" class="button">⬅ Volver al Inicio</a>
+</div>
+
+</body>
+</html>
