@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-    <style>
-/* Visor de imágenes */
+<head>
+<meta charset="UTF-8">
+<title>Deber 2 – Funciones</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- ================= ESTILOS DE VISOR ================= -->
+<style>
+/* Contenedor del visor */
 #visor {
     position: fixed;
     top: 0;
@@ -16,53 +22,156 @@
     cursor: zoom-out;
 }
 
+/* Imagen dentro del visor */
 #visor img {
     max-width: 95%;
     max-height: 95%;
     border-radius: 12px;
-    box-shadow: 0 0 40px rgba(255,255,255,0.3);
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+/* ================= CAPTURAS ================= */
+.capturas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.capturas img {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capturas img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 </style>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Deber 2 – Funciones</title>
-    <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- Estilo solo para las capturas -->
-    <style>
-        .capturas {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            margin: 40px 0;
-        }
-
-        .capturas img {
-            width: 90%;
-            max-width: 900px;
-            height: auto;
-            border: 3px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: zoom-in;
-        }
-
-        .capturas img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0,0,0,0.4);
-        }
-    </style>
 </head>
-<!-- Visor de imágenes -->
+
+<body>
+
+<!-- ================= VISOR ================= -->
 <div id="visor" onclick="cerrarVisor()">
     <img id="imagenVisor">
 </div>
 
+<div class="hero">
+    <h1>⚙️ Deber 2 – Funciones</h1>
+</div>
+
+<section class="contenido-deber">
+
+<h2>¿Qué es una función?</h2>
+<p>
+Una función es un bloque de código que realiza una tarea específica y que puede
+reutilizarse tantas veces como sea necesario dentro de un programa.
+</p>
+
+<p>
+Las funciones permiten dividir un programa en partes pequeñas que realizan
+tareas como cálculos, validaciones o procesamiento de datos.
+</p>
+
+<h2>Sintaxis de una función</h2>
+<pre>
+function nombreFuncion(parametro1, parametro2) {
+    // Código que ejecuta la función
+    return resultado;
+}
+</pre>
+
+<div class="ejemplo">
+<h3>Ejemplo de función</h3>
+<pre>
+function sumar(a, b) {
+    return a + b;
+}
+console.log(sumar(5, 3));
+</pre>
+<pre>8</pre>
+</div>
+
+<div class="ejemplo">
+<h3>Función sin parámetros</h3>
+<pre>
+function saludar() {
+    console.log("Hola, bienvenido");
+}
+saludar();
+</pre>
+<pre>Hola, bienvenido</pre>
+</div>
+
+<h2>Ejercicios prácticos</h2>
+
+<div class="ejercicio">
+<h3>Ejercicio 1 – Sistema de descuentos</h3>
+<pre>
+function calcularPrecioFinal(precio, descuento) {
+    let rebaja = precio * (descuento / 100);
+    return precio - rebaja;
+}
+
+let producto1 = calcularPrecioFinal(100, 10);
+let producto2 = calcularPrecioFinal(80, 20);
+
+console.log("Precio final del producto 1:", producto1);
+console.log("Precio final del producto 2:", producto2);
+</pre>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 2 – Conversión de temperaturas</h3>
+<pre>
+function celsiusAFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+let temp1 = celsiusAFahrenheit(25);
+let temp2 = celsiusAFahrenheit(10);
+
+console.log("25°C en Fahrenheit:", temp1);
+console.log("10°C en Fahrenheit:", temp2);
+</pre>
+</div>
+
+<h2>Conclusión</h2>
+<p>
+Las funciones permiten organizar y reutilizar el código. En este deber se aplican
+en problemas reales como descuentos y conversión de temperaturas.
+</p>
+
+<h2>📹 Video de respaldo</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://drive.google.com/file/d/1ynDyNHapN7KViQIEM913o7JwbMZx8vWv/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<h2>📸 Evidencias de la aplicación</h2>
+<div class="capturas">
+    <img src="captura6.png" alt="Captura 6" class="zoomable">
+    <img src="captura7.png" alt="Captura 7" class="zoomable">
+</div>
+
+</section>
+
+<div style="margin:60px;text-align:center;">
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
+</div>
+
+<!-- ================= SCRIPT ================= -->
 <script>
-const imagenes = document.querySelectorAll(".capturas img");
+const imagenes = document.querySelectorAll(".zoomable");
 const visor = document.getElementById("visor");
 const imagenVisor = document.getElementById("imagenVisor");
 
@@ -77,128 +186,6 @@ function cerrarVisor() {
     visor.style.display = "none";
 }
 </script>
-
-<body>
-
-<div class="hero">
-    <h1>⚙️ Deber 2 – Funciones</h1>
-</div>
-
-<section class="contenido-deber">
-
-    <!-- ================= TEORÍA ================= -->
-
-    <h2>¿Qué es una función?</h2>
-    <p>
-        Una función es un bloque de código que realiza una tarea específica y que puede
-        reutilizarse tantas veces como sea necesario dentro de un programa.
-        Las funciones permiten organizar mejor el código, evitar repetir instrucciones
-        y hacer que los programas sean más fáciles de entender, mantener y modificar.
-    </p>
-
-    <p>
-        Gracias a las funciones, un programa puede dividirse en pequeñas partes que
-        resuelven tareas concretas, como calcular valores, mostrar mensajes o procesar datos.
-    </p>
-
-    <h2>Sintaxis de una función</h2>
-    <pre>
-function nombreFuncion(parametro1, parametro2) {
-    // Código que ejecuta la función
-    return resultado;
-}
-    </pre>
-
-    <!-- ================= EJEMPLOS ================= -->
-
-    <div class="ejemplo">
-        <h3>Ejemplo de función</h3>
-        <pre>
-function sumar(a, b) {
-    return a + b;
-}
-console.log(sumar(5, 3));
-        </pre>
-        <pre>8</pre>
-    </div>
-
-    <div class="ejemplo">
-        <h3>Función sin parámetros</h3>
-        <pre>
-function saludar() {
-    console.log("Hola, bienvenido");
-}
-saludar();
-        </pre>
-        <pre>Hola, bienvenido</pre>
-    </div>
-
-    <!-- ================= EJERCICIOS ================= -->
-
-    <h2>Ejercicios prácticos</h2>
-
-    <div class="ejercicio">
-        <h3>Ejercicio 1 – Sistema de descuentos</h3>
-        <pre>
-function calcularPrecioFinal(precio, descuento) {
-    let rebaja = precio * (descuento / 100);
-    return precio - rebaja;
-}
-
-let producto1 = calcularPrecioFinal(100, 10);
-let producto2 = calcularPrecioFinal(80, 20);
-
-console.log("Precio final del producto 1:", producto1);
-console.log("Precio final del producto 2:", producto2);
-        </pre>
-    </div>
-
-    <div class="ejercicio">
-        <h3>Ejercicio 2 – Conversión de temperaturas</h3>
-        <pre>
-function celsiusAFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
-}
-
-let temp1 = celsiusAFahrenheit(25);
-let temp2 = celsiusAFahrenheit(10);
-
-console.log("25°C en Fahrenheit:", temp1);
-console.log("10°C en Fahrenheit:", temp2);
-        </pre>
-    </div>
-
-    <!-- ================= CONCLUSIÓN ================= -->
-
-    <h2>Conclusión</h2>
-    <p>
-        Las funciones permiten organizar y reutilizar el código. Estos ejercicios
-        demuestran cómo una función puede resolver problemas reales como descuentos
-        y conversiones de temperatura.
-    </p>
-
-    <!-- ================= VIDEO ================= -->
-
-    <h2>📹 Video de respaldo</h2>
-    <p>
-        👉 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1ynDyNHapN7KViQIEM913o7JwbMZx8vWv/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
-            Ver video de respaldo en Google Drive
-        </a>
-    </p>
-
-    <!-- ================= CAPTURAS ================= -->
-
-    <h2>📸 Evidencias de la aplicación</h2>
-    <div class="capturas">
-        <img src="captura6.png" alt="Captura 6 de la aplicación">
-        <img src="captura7.png" alt="Captura 7 de la aplicación">
-    </div>
-
-</section>
-
-<div style="margin:60px;text-align:center;">
-    <a href="index.html" class="button">⬅ Volver al Inicio</a>
-</div>
 
 </body>
 </html>
