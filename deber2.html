@@ -8,29 +8,28 @@
    <!-- Estilo solo para las capturas -->
 <style>
     .capturas {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        margin: 30px 0;
+        display: flex;
+        flex-direction: column;   /* Apila las imágenes una debajo de otra */
+        align-items: center;
+        gap: 40px;
+        margin: 40px 0;
     }
 
     .capturas img {
-        width: 100%;
-        max-width: 480px;
+        width: 90%;              /* Ocupa casi todo el ancho de la página */
+        max-width: 900px;        /* Tamaño grande tipo hoja */
         height: auto;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
+        cursor: zoom-in;
     }
 
-    /* Zoom y efecto al pasar el mouse */
+    /* Zoom suave al pasar el mouse */
     .capturas img:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 18px rgba(0,0,0,0.3);
-        z-index: 10;
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0,0,0,0.4);
     }
 </style>
 
