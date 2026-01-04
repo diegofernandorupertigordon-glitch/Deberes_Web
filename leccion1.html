@@ -4,8 +4,55 @@
 <meta charset="UTF-8">
 <title>Lección 1 – Actuación en Clase</title>
 <link rel="stylesheet" href="css/estilos.css">
+
+<!-- ====== ESTILOS VISOR DE IMÁGENES ====== -->
+<style>
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.imagen-poo {
+    width: 90%;
+    max-width: 900px;
+    display: block;
+    margin: 30px auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-poo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+</style>
 </head>
+
 <body>
+
+<!-- ====== VISOR ====== -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
 
 <div class="hero">
 <h1>📊 Lección 1 – Actuación en Clase</h1>
@@ -14,15 +61,9 @@
 
 <section class="contenido-deber">
 
-<!-- ================= TEMA 1 ================= -->
-
 <div class="ejemplo">
 <h3>1️⃣ ¿Qué es una expresión?</h3>
-<p>
-Una expresión es una combinación de valores, variables y operadores que se evalúa
-para producir un resultado.
-</p>
-
+<p>Una expresión es una combinación de valores, variables y operadores.</p>
 <pre>
 5 + 3
 x * 2
@@ -30,11 +71,8 @@ edad > 18
 </pre>
 </div>
 
-<!-- ================= TEMA 2 ================= -->
-
 <div class="ejemplo">
 <h3>2️⃣ Tipos de Operadores</h3>
-
 <pre>
 Aritméticos: +  -  *  /
 Relacionales: >  <  ==  !=
@@ -42,19 +80,14 @@ Lógicos: &&  ||  !
 </pre>
 </div>
 
-<!-- ================= TEMA 3 ================= -->
-
 <div class="ejercicio">
 <h3>3️⃣ Ejercicios sobre funciones</h3>
-
 <pre>
 function sumar(a, b) {
   return a + b;
 }
 </pre>
 </div>
-
-<!-- ================= TEMA 4 ================= -->
 
 <div class="ejemplo">
 <h3>4️⃣ Composable Text reutilizable</h3>
@@ -70,79 +103,47 @@ fun UserInfoText(nombre: String, edad: String, carrera: String) {
 }
 </pre>
 
-<p style="text-align:center; margin-top:16px;">
-<strong>📱 Capturas de la app Saludo</strong>
-</p>
+<p style="text-align:center;"><strong>📱 Capturas de la app Saludo</strong></p>
 
-<img src="captura9.png"
-     style="max-width:100%; border-radius:8px; margin:16px auto; display:block;">
+<img src="captura9.png" class="imagen-poo">
 
 <p style="text-align:center;">
-🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/Saludo.git" target="_blank">
-Repositorio GitHub</a><br>
-
-📦 <a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view?usp=drive_link" target="_blank">
-Descargar APK</a><br>
-
-🎥 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1PUqfnZcoA76A06426Dmhb11bcWJ6ZegC/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
-Ver video de respaldo – App Saludo
-</a>
+🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/Saludo.git" target="_blank">Repositorio GitHub</a><br>
+📦 <a href="https://drive.google.com/file/d/1byagt2QB6v5ASMZ5_17Zj9qE8fMz7VNj/view?usp=drive_link" target="_blank">Descargar APK</a>
 </p>
 
+<div style="position:relative;padding-bottom:56.25%;height:0;">
+<iframe src="https://drive.google.com/file/d/1PUqfnZcoA76A06426Dmhb11bcWJ6ZegC/preview"
+style="position:absolute;width:100%;height:100%;border:0;" allowfullscreen></iframe>
 </div>
 
-<!-- ================= TEMA 5 ================= -->
+</div>
 
 <div class="ejemplo">
 <h3>5️⃣ Calculadora básica</h3>
 
-<p>
-Aplicación Android desarrollada en Jetpack Compose que permite realizar
-operaciones básicas entre dos números.
-</p>
+<p>App Android que realiza operaciones matemáticas básicas.</p>
 
 <pre>
-ButtonUi(text = "Sumar") {
-    resultado = "El resultado de la suma es: ${n1 + n2}"
-}
-
-ButtonUi(text = "Restar") {
-    resultado = "El resultado de la resta es: ${n1 - n2}"
-}
-
-ButtonUi(text = "Multiplicar") {
-    resultado = "El resultado de la multiplicación es: ${n1 * n2}"
-}
-
-ButtonUi(text = "Dividir") {
-    resultado = if (n2 != 0.0) {
-        "El resultado de la división es: ${n1 / n2}"
-    } else {
-        "Error: división por 0"
-    }
-}
+ButtonUi(text = "Sumar") { resultado = n1 + n2 }
+ButtonUi(text = "Restar") { resultado = n1 - n2 }
+ButtonUi(text = "Multiplicar") { resultado = n1 * n2 }
+ButtonUi(text = "Dividir") { resultado = if (n2 != 0.0) n1/n2 else "Error" }
 </pre>
 
-<p style="text-align:center; margin-top:16px;">
-<strong>🧮 Capturas de la app Calculadora</strong>
-</p>
+<p style="text-align:center;"><strong>🧮 Capturas de la app Calculadora</strong></p>
 
-<img src="captura10.png"
-     style="max-width:100%; border-radius:8px; margin:16px auto; display:block;">
+<img src="captura10.png" class="imagen-poo">
 
 <p style="text-align:center;">
-🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/ComposeTercero.git" target="_blank">
-Repositorio GitHub</a><br>
-
-📦 <a href="https://drive.google.com/file/d/1YZg_RtpFH6DLlrKJia3pRIKz_IcLAr3k/view?usp=drive_link" target="_blank">
-Descargar APK</a><br>
-
-🎥 <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1pFoCs5j3WdSZmQ952AuREkh7ADntZ8FD/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
-Ver video de respaldo – App Calculadora
-  
-</a>
+🔗 <a href="https://github.com/diegofernandorupertigordon-glitch/ComposeTercero.git" target="_blank">Repositorio GitHub</a><br>
+📦 <a href="https://drive.google.com/file/d/1YZg_RtpFH6DLlrKJia3pRIKz_IcLAr3k/view?usp=drive_link" target="_blank">Descargar APK</a>
 </p>
 
+<div style="position:relative;padding-bottom:56.25%;height:0;">
+<iframe src="https://drive.google.com/file/d/1pFoCs5j3WdSZmQ952AuREkh7ADntZ8FD/preview"
+style="position:absolute;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+</div>
 
 </div>
 
@@ -151,6 +152,23 @@ Ver video de respaldo – App Calculadora
 <div style="margin:60px;text-align:center;">
 <a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<script>
+const imagenes = document.querySelectorAll(".imagen-poo");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
