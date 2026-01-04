@@ -5,37 +5,35 @@
     <title>Deber 2 – Funciones</title>
     <link rel="stylesheet" href="css/estilos.css">
 
-   <!-- Estilo solo para las capturas -->
-<style>
-    .capturas {
-        display: flex;
-        flex-direction: column;   /* Apila las imágenes una debajo de otra */
-        align-items: center;
-        gap: 40px;
-        margin: 40px 0;
-    }
+    <!-- Estilo solo para las capturas -->
+    <style>
+        .capturas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
 
-    .capturas img {
-        width: 90%;              /* Ocupa casi todo el ancho de la página */
-        max-width: 900px;        /* Tamaño grande tipo hoja */
-        height: auto;
-        border: 3px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: zoom-in;
-    }
+        .capturas img {
+            width: 90%;
+            max-width: 900px;
+            height: auto;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: zoom-in;
+        }
 
-    /* Zoom suave al pasar el mouse */
-    .capturas img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px rgba(0,0,0,0.4);
-    }
-</style>
-
+        .capturas img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        }
+    </style>
 </head>
-<body>
 
+<body>
 
 <div class="hero">
     <h1>⚙️ Deber 2 – Funciones</h1>
@@ -59,16 +57,10 @@
     </p>
 
     <h2>Sintaxis de una función</h2>
-    <p>
-        Una función en JavaScript se define usando la palabra <strong>function</strong>,
-        seguida del nombre de la función, los parámetros entre paréntesis y el bloque de
-        código entre llaves.
-    </p>
-
     <pre>
 function nombreFuncion(parametro1, parametro2) {
-  // Código que ejecuta la función
-  return resultado;
+    // Código que ejecuta la función
+    return resultado;
 }
     </pre>
 
@@ -78,7 +70,7 @@ function nombreFuncion(parametro1, parametro2) {
         <h3>Ejemplo de función</h3>
         <pre>
 function sumar(a, b) {
-  return a + b;
+    return a + b;
 }
 console.log(sumar(5, 3));
         </pre>
@@ -89,7 +81,7 @@ console.log(sumar(5, 3));
         <h3>Función sin parámetros</h3>
         <pre>
 function saludar() {
-  console.log("Hola, bienvenido");
+    console.log("Hola, bienvenido");
 }
 saludar();
         </pre>
@@ -144,7 +136,7 @@ console.log("10°C en Fahrenheit:", temp2);
 
     <h2>📹 Video de respaldo</h2>
     <p>
-        👉 <a href="https://drive.google.com/file/d/18uGBOuJxRGVEhWNix-aA8sEh2puXNQyX/view?usp=sharing" target="_blank">
+        👉 <a href="https://drive.google.com/file/d/1ynDyNHapN7KViQIEM913o7JwbMZx8vWv/view?usp=sharing" target="_blank">
         Ver video de respaldo en Google Drive
         </a>
     </p>
