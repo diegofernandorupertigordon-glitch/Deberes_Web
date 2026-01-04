@@ -4,9 +4,62 @@
 <meta charset="UTF-8">
 <title>AppUtility</title>
 <link rel="stylesheet" href="css/estilos.css">
+
+<style>
+/* ===== VISOR DE IMÁGENES ===== */
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+/* ===== GALERÍA ===== */
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.galeria img {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    border: 3px solid #ccc;
+    box-shadow: 0 0 18px rgba(0,0,0,0.25);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0,0,0,0.5);
+}
+</style>
 </head>
 
 <body>
+
+<!-- VISOR -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
 
 <div class="hero">
   <h1>📱 Actuación en Clases</h1>
@@ -15,105 +68,83 @@
 
 <section class="contenido-deber">
 
-  <div class="ejemplo">
-    <h3>Descripción General</h3>
-    <p>
-      Durante la actuación en clases se presentó la aplicación móvil
-      <strong>Utility</strong>, desarrollada con <strong>Android + Jetpack Compose</strong>,
-      aplicando navegación, autenticación, componentes reutilizables y un diseño
-      futurista basado en Material 3.
-    </p>
-  </div>
+<div class="ejemplo">
+<h3>Descripción General</h3>
+<p>Aplicación Utility desarrollada con Jetpack Compose.</p>
+</div>
 
-  <div class="ejemplo">
-    <h3>Arquitectura de la Aplicación</h3>
-    <ul>
-      <li>Jetpack Compose</li>
-      <li>Navegación con NavGraph</li>
-      <li>ViewModel</li>
-      <li>Componentes reutilizables</li>
-    </ul>
-  </div>
+<div class="ejemplo">
+<h3>Arquitectura</h3>
+<ul>
+<li>Jetpack Compose</li>
+<li>Navegación</li>
+<li>ViewModel</li>
+<li>Componentes</li>
+</ul>
+</div>
 
-  <div class="ejercicio">
-    <h3>📦 Evidencias de la Aplicación</h3>
+<div class="ejercicio">
+<h3>📦 Evidencias</h3>
 
-    <p>
-      <strong>Descarga del APK (acceso público):</strong><br>
-      <a href="https://drive.google.com/file/d/1yaSA2qe-VEtlRrpz_e-2rmsCCZUJ-79V/view?usp=drive_link" target="_blank">
-        Descargar APK – App Utility
-      </a>
-    </p>
+<a href="https://drive.google.com/file/d/1yaSA2qe-VEtlRrpz_e-2rmsCCZUJ-79V/view?usp=drive_link" target="_blank">
+Descargar APK
+</a>
 
-    <p style="margin-top:15px;">
-      <strong>🎥 Video explicativo de las características:</strong><br>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1W1A7G1bpDJEtZvsikMrRgP_t6B2fIykl/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
-      👉 Ver video de la aplicación
-      </a>
-    </p>
-  </div>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden; margin-top:25px;">
+<iframe src="https://drive.google.com/file/d/1W1A7G1bpDJEtZvsikMrRgP_t6B2fIykl/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+</div>
 
-  <!-- GALERÍA -->
-  <div class="ejemplo">
-    <h3>🖼️ Capturas de Respaldo de la Aplicación</h3>
+<div class="ejemplo">
+<h3>🖼️ Capturas</h3>
 
-    <div class="galeria">
-      <img src="captura18.png" alt="Captura 18">
-      <img src="captura19.png" alt="Captura 19">
-      <img src="captura20.png" alt="Captura 20">
-      <img src="captura21.png" alt="Captura 21">
-      <img src="captura22.png" alt="Captura 22">
-      <img src="captura23.png" alt="Captura 23">
-    </div>
-  </div>
+<div class="galeria">
+<img src="captura18.png">
+<img src="captura19.png">
+<img src="captura20.png">
+<img src="captura21.png">
+<img src="captura22.png">
+<img src="captura23.png">
+</div>
+</div>
 
-  <!-- RESPALDO TÉCNICO -->
-  <div class="ejemplo">
-    <h3>💻 Evidencia Técnica del Desarrollo</h3>
+<div class="ejemplo">
+<h3>💻 Código</h3>
 
 <pre>
 class MainActivity : ComponentActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    enableEdgeToEdge()
-    setContent { UtilityApp() }
-  }
+override fun onCreate(savedInstanceState: Bundle?) {
+super.onCreate(savedInstanceState)
+setContent { UtilityApp() }
+}
 }
 </pre>
 
-<pre>
-@Composable
-fun UtilityApp() {
-  SaludoTheme {
-    val navController = rememberNavController()
-    FuturisticContainer {
-      NavGraph(navController)
-    }
-  }
-}
-</pre>
-
-<pre>
-MenuCard("Calculadora", Icons.Filled.Calculate) {
-  navController.navigate(Routes.Calculadora.route)
-}
-</pre>
-
-<pre>
-NavHost(navController, startDestination = Routes.Splash.route) {
-  composable(Routes.Login.route) { LoginScreen(navController) }
-  composable(Routes.Main.route) { MainScreen(navController) }
-  composable(Routes.Calculadora.route) { CalculadoraScreen() }
-}
-</pre>
-
-  </div>
+</div>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-  <a href="index.html" class="button">⬅ Volver al Inicio</a>
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<script>
+const imagenes = document.querySelectorAll(".galeria img");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
