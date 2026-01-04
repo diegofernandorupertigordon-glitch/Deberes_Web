@@ -5,7 +5,7 @@
     <title>Deber 2 – Funciones</title>
     <link rel="stylesheet" href="css/estilos.css">
 
-    <!-- Estilo solo para las capturas -->
+   <!-- Estilo solo para las capturas -->
 <style>
     .capturas {
         display: grid;
@@ -22,11 +22,21 @@
         border: 2px solid #ccc;
         border-radius: 8px;
         box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Zoom y efecto al pasar el mouse */
+    .capturas img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 18px rgba(0,0,0,0.3);
+        z-index: 10;
     }
 </style>
 
 </head>
 <body>
+
 
 <div class="hero">
     <h1>⚙️ Deber 2 – Funciones</h1>
