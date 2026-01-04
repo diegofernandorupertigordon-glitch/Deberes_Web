@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Deber 3 – POO</title>
-    <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<title>Deber 3 – POO</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- ================= ESTILOS DE VISOR ================= -->
+<style>
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.imagen-poo {
+    width: 90%;
+    max-width: 900px;
+    display: block;
+    margin: 30px auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-poo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+</style>
 </head>
+
 <body>
+
+<!-- Visor -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
 
 <div class="hero">
     <h1>📦 Programación Orientada a Objetos en Kotlin</h1>
@@ -13,56 +60,32 @@
 
 <section class="contenido-deber">
 
-    <!-- ================= TEORÍA ================= -->
+<h2>¿Qué es la Programación Orientada a Objetos?</h2>
+<p>
+La Programación Orientada a Objetos (POO) es un paradigma que permite organizar
+el software usando clases y objetos.
+</p>
 
-    <h2>¿Qué es la Programación Orientada a Objetos?</h2>
-    <p>
-        La Programación Orientada a Objetos (POO) es un paradigma de programación que permite
-        organizar el software utilizando <strong>clases</strong> y <strong>objetos</strong>.
-        Cada objeto representa una entidad del mundo real, como una persona, un auto o un producto,
-        y contiene datos (atributos) y acciones (métodos).
-    </p>
+<h2>Conceptos principales</h2>
+<ul>
+<li><strong>Encapsulamiento</strong></li>
+<li><strong>Abstracción</strong></li>
+<li><strong>Herencia</strong></li>
+<li><strong>Polimorfismo</strong></li>
+</ul>
 
-    <p>
-        Este enfoque facilita la organización del código, su reutilización y su mantenimiento,
-        haciendo que los programas sean más claros, ordenados y escalables.
-    </p>
-
-    <h2>Conceptos principales</h2>
-    <p>La POO se basa en cuatro pilares fundamentales:</p>
-    <ul>
-        <li><strong>Encapsulamiento:</strong> los datos se mantienen dentro de la clase.</li>
-        <li><strong>Abstracción:</strong> se muestra solo lo necesario del objeto.</li>
-        <li><strong>Herencia:</strong> una clase puede heredar de otra.</li>
-        <li><strong>Polimorfismo:</strong> un método puede comportarse de forma diferente.</li>
-    </ul>
-
-    <h2>Sintaxis de una clase en Kotlin</h2>
-    <p>
-        En Kotlin una clase se define con la palabra clave <strong>class</strong> y los atributos se
-        declaran directamente en el constructor.
-    </p>
-
-    <pre>
+<h2>Sintaxis de una clase</h2>
+<pre>
 class NombreClase(val atributo: Tipo) {
-
     fun metodo(): Tipo {
         return valor
     }
-
 }
-    </pre>
+</pre>
 
-    <!-- ================= PERSONA ================= -->
-
-    <div class="ejemplo">
-        <h3>Clase Persona (Kotlin)</h3>
-        <p>
-            Esta clase representa a una persona. Tiene nombre y edad, y un método que devuelve
-            una descripción del objeto.
-        </p>
-
-        <pre>
+<div class="ejemplo">
+<h3>Clase Persona</h3>
+<pre>
 open class Persona(
     val nombre: String,
     val edad: Int
@@ -71,67 +94,27 @@ open class Persona(
         return "Persona -> Nombre: $nombre, Edad: $edad"
     }
 }
-        </pre>
+</pre>
+</div>
 
-        <p><strong>Ejemplo de uso:</strong></p>
-        <pre>
-val persona = Persona("Carlos", 40)
-println(persona.descripcion())
-        </pre>
-
-        <p><strong>Resultado en Logcat:</strong></p>
-        <pre>
-Persona -> Nombre: Carlos, Edad: 40
-        </pre>
-    </div>
-
-    <!-- ================= HERENCIA ================= -->
-
-    <h2>Herencia y Polimorfismo</h2>
-
-    <div class="ejemplo">
-        <h3>Clase Estudiante (hereda de Persona)</h3>
-        <p>
-            La clase Estudiante hereda de Persona. Además de nombre y edad, tiene la propiedad
-            carrera y cambia el comportamiento del método descripcion().
-        </p>
-
-        <pre>
+<div class="ejemplo">
+<h3>Clase Estudiante</h3>
+<pre>
 class Estudiante(
     nombre: String,
     edad: Int,
     val carrera: String
 ) : Persona(nombre, edad) {
-
     override fun descripcion(): String {
         return "Estudiante -> Nombre: $nombre, Carrera: $carrera"
     }
 }
-        </pre>
+</pre>
+</div>
 
-        <p><strong>Ejemplo de uso:</strong></p>
-        <pre>
-val estudiante = Estudiante("Ana", 20, "Software")
-println(estudiante.descripcion())
-        </pre>
-
-        <p><strong>Resultado en Logcat:</strong></p>
-        <pre>
-Estudiante -> Nombre: Ana, Carrera: Software
-        </pre>
-    </div>
-
-    <!-- ================= EJERCICIOS ================= -->
-
-    <h2>Ejercicios prácticos</h2>
-
-    <div class="ejercicio">
-        <h3>Ejercicio 1 – Clase Auto</h3>
-        <p>
-            La clase Auto representa un vehículo. Tiene marca y año, y un método que devuelve su información.
-        </p>
-
-        <pre>
+<div class="ejercicio">
+<h3>Clase Auto</h3>
+<pre>
 class Auto(
     val marca: String,
     val anio: Int
@@ -140,74 +123,39 @@ class Auto(
         return "Auto -> Marca: $marca, Año: $anio"
     }
 }
-        </pre>
+</pre>
+</div>
 
-        <p><strong>Ejemplo de uso:</strong></p>
-        <pre>
-val auto = Auto("Toyota", 2022)
-println(auto.info())
-        </pre>
+<h2>📸 Evidencia gráfica</h2>
+<img src="POO.png" class="imagen-poo" alt="POO Kotlin">
 
-        <p><strong>Resultado en Logcat:</strong></p>
-        <pre>
-Auto -> Marca: Toyota, Año: 2022
-        </pre>
-    </div>
-
-    <div class="ejercicio">
-        <h3>Ejercicio 2 – Uso de todas las clases</h3>
-        <p>
-            En la aplicación Android se crean objetos de todas las clases y se muestran sus datos
-            en Logcat.
-        </p>
-
-        <pre>
-val persona = Persona("Carlos", 40)
-val estudiante = Estudiante("Ana", 20, "Software")
-val auto = Auto("Toyota", 2022)
-
-println(persona.descripcion())
-println(estudiante.descripcion())
-println(auto.info())
-        </pre>
-
-        <p><strong>Resultado en Logcat:</strong></p>
-        <pre>
-Persona -> Nombre: Carlos, Edad: 40
-Estudiante -> Nombre: Ana, Carrera: Software
-Auto -> Marca: Toyota, Año: 2022
-        </pre>
-    </div>
-
-    <!-- ================= EVIDENCIAS ================= -->
-
-    <h2>📸 Evidencia gráfica</h2>
-    <p>
-        A continuación se muestra una imagen representativa del uso de clases,
-        objetos y herencia en la aplicación desarrollada.
-    </p>
-
-    <img src="POO.png" alt="Ejemplo de Programación Orientada a Objetos en Kotlin"
-         style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-    <h2>📹 Video de respaldo</h2>
-    <p>
-        En el siguiente video se evidencian las actividades realizadas sobre
-        Programación Orientada a Objetos en Kotlin.
-    </p>
-
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden; margin-top:15px;">
-        <iframe src="https://drive.google.com/file/d/1oGTMsvkdgGGuoydFsmuMYUxgTzIeecQ8/preview"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                allow="autoplay; encrypted-media" allowfullscreen>
-        </iframe>
-    </div>
+<h2>📹 Video de respaldo</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<iframe src="https://drive.google.com/file/d/1oGTMsvkdgGGuoydFsmuMYUxgTzIeecQ8/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allowfullscreen></iframe>
+</div>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-    <a href="index.html" class="button">⬅ Volver al Inicio</a>
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<script>
+const imagen = document.querySelector(".imagen-poo");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagen.addEventListener("click", () => {
+    imagenVisor.src = imagen.src;
+    visor.style.display = "flex";
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
