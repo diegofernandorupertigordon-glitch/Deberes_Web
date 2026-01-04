@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Lección 2 – Figma</title>
-  <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<title>Lección 2 – Figma</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- ===== ESTILO DEL VISOR DE IMÁGENES ===== -->
+<style>
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.imagen-poo {
+    width: 90%;
+    max-width: 900px;
+    display: block;
+    margin: 35px auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-poo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+</style>
 </head>
+
 <body>
+
+<!-- VISOR -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
 
 <div class="hero">
   <h1>🎨 Lección 2 – Figma</h1>
@@ -14,167 +61,97 @@
 
 <section class="contenido-deber">
 
-  <div class="ejemplo">
-    <h3>¿Qué es Figma?</h3>
-    <p>
-      Figma es una herramienta en línea que permite diseñar interfaces gráficas,
-      crear prototipos interactivos y trabajar en equipo en tiempo real.
-      Se utiliza principalmente para diseñar aplicaciones móviles, páginas web
-      y sistemas digitales antes de ser programados.
-    </p>
-    <p>
-      Una de sus principales ventajas es que varios usuarios pueden trabajar al mismo
-      tiempo sobre un mismo diseño sin necesidad de instalar programas adicionales.
-    </p>
-  </div>
+<div class="ejemplo">
+<h3>¿Qué es Figma?</h3>
+<p>Figma es una herramienta en línea para diseñar interfaces y prototipos.</p>
+</div>
 
-  <div class="ejemplo">
-    <h3>¿Para qué sirve Figma?</h3>
-    <p>
-      Figma permite planificar cómo se verá y cómo funcionará una aplicación o sitio web.
-      Con esta herramienta se pueden crear:
-    </p>
-    <pre>
+<div class="ejemplo">
+<h3>¿Para qué sirve Figma?</h3>
+<pre>
 • Diseños de pantallas
-• Prototipos interactivos
+• Prototipos
 • Botones y formularios
-• Tarjetas y menús
-• Interfaces de aplicaciones y páginas web
-    </pre>
-  </div>
+• Interfaces
+</pre>
+</div>
 
-  <div class="ejemplo">
-    <h3>Herramientas principales</h3>
-    <p>
-      Figma cuenta con múltiples herramientas para diseñar. Las más utilizadas son:
-    </p>
-    <pre>
-V  Selección → Mover y editar objetos
-R  Rectángulo → Crear cajas y botones
-T  Texto → Escribir títulos y etiquetas
-P  Pluma → Dibujar formas personalizadas
-H  Mano → Mover el lienzo
-    </pre>
-  </div>
+<div class="ejemplo">
+<h3>Herramientas principales</h3>
+<pre>
+V  Selección
+R  Rectángulo
+T  Texto
+P  Pluma
+H  Mano
+</pre>
+</div>
 
-  <!-- ================= COMANDOS DOCUMENTADOS ================= -->
+<div class="ejemplo">
+<h3>Herramienta Move (V)</h3>
+<img src="captura1.png" class="imagen-poo">
+</div>
 
-  <div class="ejemplo">
-    <h3>Herramienta Move (V)</h3>
-    <p><strong>¿Qué hace?</strong><br>
-      Permite seleccionar, mover, redimensionar y duplicar elementos dentro del lienzo
-      de Figma.
-    </p>
+<div class="ejemplo">
+<h3>Herramienta Rectangle (R)</h3>
+<img src="captura2.png" class="imagen-poo">
+</div>
 
-    <p><strong>¿Cuándo usarla?</strong><br>
-      Al organizar elementos, ajustar posiciones y modificar tamaños.
-    </p>
+<div class="ejemplo">
+<h3>Alineación y distribución</h3>
+<img src="captura3.png" class="imagen-poo">
+</div>
 
-    <img src="captura1.png" alt="Herramienta Move en Figma"
-         style="max-width:100%; height:auto; border-radius:8px;">
-  </div>
+<div class="ejemplo">
+<h3>Componentes</h3>
+<img src="captura4.png" class="imagen-poo">
+</div>
 
-  <div class="ejemplo">
-    <h3>Herramienta Rectangle (R)</h3>
-    <p><strong>¿Qué hace?</strong><br>
-      Permite crear formas rectangulares y cuadradas.
-    </p>
+<div class="ejemplo">
+<h3>Prototipado</h3>
+<img src="captura5.png" class="imagen-poo">
+</div>
 
-    <p><strong>¿Cuándo usarla?</strong><br>
-      Para crear botones, tarjetas y contenedores.
-    </p>
+<div class="ejercicio">
+<h3>Actividad práctica</h3>
+<img src="captura12.png" class="imagen-poo">
 
-    <img src="captura2.png" alt="Herramienta Rectangle en Figma"
-         style="max-width:100%; height:auto; border-radius:8px;">
-  </div>
+<p>
+<a href="https://baton-arena-54934140.figma.site/" target="_blank">
+https://baton-arena-54934140.figma.site/
+</a>
+</p>
+</div>
 
-  <div class="ejemplo">
-    <h3>Comandos de alineación y distribución</h3>
-    <p><strong>¿Qué hacen?</strong><br>
-      Permiten alinear y distribuir elementos horizontal y verticalmente.
-    </p>
-
-    <p><strong>¿Cuándo usarlos?</strong><br>
-      Para mantener un diseño ordenado y visualmente equilibrado.
-    </p>
-
-    <img src="captura3.png" alt="Alineación y distribución en Figma"
-         style="max-width:100%; height:auto; border-radius:8px;">
-  </div>
-
-  <div class="ejemplo">
-    <h3>Componentes en Figma</h3>
-    <p><strong>¿Qué hacen?</strong><br>
-      Permiten convertir un elemento en un componente reutilizable.
-    </p>
-
-    <p><strong>¿Cuándo usarlos?</strong><br>
-      Cuando un mismo elemento se repite en varias pantallas.
-    </p>
-
-    <img src="captura4.png" alt="Componentes en Figma"
-         style="max-width:100%; height:auto; border-radius:8px;">
-  </div>
-
-  <div class="ejemplo">
-    <h3>Herramientas de prototipado</h3>
-    <p><strong>¿Qué hacen?</strong><br>
-      Permiten crear interacciones y simular navegación entre pantallas.
-    </p>
-
-    <p><strong>¿Cuándo usarlas?</strong><br>
-      Para probar la experiencia del usuario antes de programar.
-    </p>
-
-    <img src="captura5.png" alt="Prototipado en Figma"
-         style="max-width:100%; height:auto; border-radius:8px;">
-  </div>
-
-  <!-- ================= ACTIVIDAD ================= -->
-
-  <div class="ejercicio">
-    <h3>Actividad práctica</h3>
-    <p>
-      Diseña en Figma una tarjeta de una aplicación que contenga:
-    </p>
-    <pre>
-• Un título
-• Un botón
-• Un rectángulo simulando una imagen
-    </pre>
-
-    <img src="captura12.png" alt="Actividad práctica en Figma"
-         style="max-width:100%; height:auto; border-radius:8px; margin-top:20px;">
-
-    <p style="margin-top:15px;">
-      <strong>Enlace de respaldo del diseño en Figma:</strong><br>
-      <a href="https://baton-arena-54934140.figma.site/" target="_blank">
-        https://baton-arena-54934140.figma.site/
-      </a>
-    </p>
-  </div>
-
-  <!-- ================= PÁGINA WEB ================= -->
-
-  <div class="ejemplo">
-    <h3>Página web de prueba (Figma)</h3>
-    <p>
-      Página web creada en Figma donde se aplican los comandos y herramientas estudiadas.
-    </p>
-
-    <p>
-      <strong>Enlace:</strong><br>
-      <a href="https://neo-city-75342052.figma.site/" target="_blank">
-        https://neo-city-75342052.figma.site/
-      </a>
-    </p>
-  </div>
+<div class="ejemplo">
+<h3>Página web de prueba</h3>
+<a href="https://neo-city-75342052.figma.site/" target="_blank">
+https://neo-city-75342052.figma.site/
+</a>
+</div>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-  <a href="index.html" class="button">⬅ Volver al Inicio</a>
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<script>
+const imagenes = document.querySelectorAll(".imagen-poo");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
