@@ -6,21 +6,25 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <!-- Estilo solo para las capturas -->
-    <style>
-        .capturas {
-            text-align: center;
-            margin: 30px 0;
-        }
+<style>
+    .capturas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        margin: 30px 0;
+    }
 
-        .capturas img {
-            width: 45%;
-            max-width: 400px;
-            margin: 10px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-    </style>
+    .capturas img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+</style>
+
 </head>
 <body>
 
