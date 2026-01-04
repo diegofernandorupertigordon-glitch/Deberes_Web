@@ -125,44 +125,59 @@ saludar();
 
     <h2>Ejercicios prácticos</h2>
 
+    <!-- ===== EJERCICIO 1 NUEVO ===== -->
     <div class="ejercicio">
-        <h3>Ejercicio 1</h3>
+        <h3>Ejercicio 1 – Sistema de descuentos</h3>
         <p>
-            Crea una función que reciba un número y devuelva su cuadrado.
+            Se crea una función que recibe el precio de un producto y un porcentaje de descuento,
+            y devuelve el precio final luego de aplicar la rebaja.
         </p>
 
         <pre>
-function cuadrado(x){
-  return x * x;
+function calcularPrecioFinal(precio, descuento) {
+    let rebaja = precio * (descuento / 100);
+    return precio - rebaja;
 }
 
-console.log(cuadrado(4));
+let producto1 = calcularPrecioFinal(100, 10);
+let producto2 = calcularPrecioFinal(80, 20);
+
+console.log("Precio final del producto 1:", producto1);
+console.log("Precio final del producto 2:", producto2);
         </pre>
 
         <p><strong>Resultado en pantalla:</strong></p>
-        <pre>16</pre>
+        <pre>
+Precio final del producto 1: 90
+Precio final del producto 2: 64
+        </pre>
     </div>
 
+    <!-- ===== EJERCICIO 2 NUEVO ===== -->
     <div class="ejercicio">
-        <h3>Ejercicio 2</h3>
+        <h3>Ejercicio 2 – Conversión de temperaturas</h3>
         <p>
-            Crea una función que reciba dos números y muestre cuál es el mayor.
+            Se crea una función que convierte grados Celsius a Fahrenheit usando una fórmula matemática.
+            La función se reutiliza para convertir diferentes valores.
         </p>
 
         <pre>
-function mayor(a, b) {
-  if (a > b) {
-    return a;
-  } else {
-    return b;
-  }
+function celsiusAFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
 }
 
-console.log(mayor(10, 7));
+let temp1 = celsiusAFahrenheit(25);
+let temp2 = celsiusAFahrenheit(10);
+
+console.log("25°C en Fahrenheit:", temp1);
+console.log("10°C en Fahrenheit:", temp2);
         </pre>
 
         <p><strong>Resultado en pantalla:</strong></p>
-        <pre>10</pre>
+        <pre>
+25°C en Fahrenheit: 77
+10°C en Fahrenheit: 50
+        </pre>
     </div>
 
     <!-- ================= CONCLUSIÓN ================= -->
