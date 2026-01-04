@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Examen – Diseño de Sistema de Transporte Público</title>
-    <link rel="stylesheet" href="css/estilos.css">
+<meta charset="UTF-8">
+<title>Examen – Diseño de Sistema de Transporte Público</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<!-- ===== ESTILO DEL VISOR DE IMÁGENES ===== -->
+<style>
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.imagen-poo {
+    width: 90%;
+    max-width: 900px;
+    display: block;
+    margin: 35px auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-poo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+</style>
 </head>
+
 <body>
+
+<!-- VISOR DE IMAGEN -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
 
 <div class="hero">
     <h1>🚍 Sistema Web para el Transporte Público</h1>
@@ -14,184 +61,60 @@
 
 <section class="contenido-deber">
 
-    <!-- ================= TEMA CENTRAL ================= -->
+<div class="ejemplo">
+<h3>Tema del Proyecto</h3>
+<p>Diseño de sistema web para el control del transporte público.</p>
+</div>
 
-    <div class="ejemplo">
-        <h3>Tema del Proyecto</h3>
-        <p>
-            Diseño de una página web para el <strong>inventario, control de infraestructura,
-            reportes de daños y monitoreo en tiempo real</strong> del sistema de transporte público,
-            que incluye paradas y estaciones del <strong>Trolebús</strong>, buses del
-            <strong>Corredor Central</strong> y <strong>Ecovía</strong>.
-        </p>
-    </div>
+<div class="ejemplo">
+<h3>Fases del Proyecto</h3>
+<p>Levantamiento, análisis, diseño y validación.</p>
+</div>
 
-    <!-- ================= FASE 1 ================= -->
+<div class="ejercicio">
 
-    <div class="ejemplo">
-        <h3>Fase 1: Contacto inicial con el cliente</h3>
+<h3>📌 Proyecto en Figma</h3>
+<a href="https://atom-block-48547580.figma.site/" target="_blank">
+https://atom-block-48547580.figma.site/
+</a>
 
-        <p><strong>Primera reunión</strong></p>
-        <p>
-            Se realizó una primera reunión con el cliente, representante del sistema de transporte público,
-            con el objetivo de conocer la situación actual y los problemas existentes en el control
-            de infraestructura.
-        </p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden; margin-top:25px;">
+<iframe src="https://drive.google.com/file/d/1V8HdLIuEV--E-KDvoRs6_OdB3dU-0Dpv/preview"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+</div>
 
-        <p><strong>Identificación de necesidades</strong></p>
-        <p>
-            El cliente manifestó la necesidad de contar con un sistema que permita controlar el estado
-            de paradas, estaciones y unidades, así como llevar un registro de daños y mantenimientos.
-        </p>
+<h3 style="margin-top:40px;">📸 Capturas del sistema</h3>
 
-        <p><strong>Preguntas realizadas</strong></p>
-        <ul>
-            <li>¿Qué tipos de usuarios utilizarán el sistema?</li>
-            <li>¿Qué información debe visualizarse en tiempo real?</li>
-            <li>¿Cuáles son los daños más frecuentes?</li>
-        </ul>
-    </div>
+<img src="captura13.png" class="imagen-poo">
+<img src="captura14.png" class="imagen-poo">
+<img src="captura15.png" class="imagen-poo">
+<img src="captura16.png" class="imagen-poo">
+<img src="captura17.png" class="imagen-poo">
 
-    <!-- ================= FASE 2 ================= -->
-
-    <div class="ejemplo">
-        <h3>Fase 2: Levantamiento de requisitos</h3>
-
-        <p><strong>Usuarios del sistema</strong></p>
-        <ul>
-            <li>Administrador</li>
-            <li>Personal de mantenimiento</li>
-            <li>Supervisores</li>
-            <li>Operadores</li>
-        </ul>
-
-        <p><strong>Funciones principales</strong></p>
-        <ul>
-            <li>Inventario de infraestructura</li>
-            <li>Registro de reportes de daños</li>
-            <li>Monitoreo del estado del sistema</li>
-        </ul>
-
-        <p><strong>Pantallas necesarias</strong></p>
-        <ul>
-            <li>Dashboard principal</li>
-            <li>Inventario</li>
-            <li>Reportes</li>
-            <li>Monitoreo en tiempo real</li>
-        </ul>
-
-        <p><strong>Restricciones</strong></p>
-        <p>
-            El proyecto corresponde únicamente a la <strong>fase de diseño</strong>.
-            No incluye programación ni desarrollo funcional.
-        </p>
-    </div>
-
-    <!-- ================= FASE 3 ================= -->
-
-    <div class="ejemplo">
-        <h3>Fase 3: Análisis del problema</h3>
-
-        <p><strong>Procesos y reglas de negocio</strong></p>
-        <p>
-            Todo daño debe ser registrado, clasificado y tener un estado
-            (pendiente, en proceso o solucionado).
-        </p>
-
-        <p><strong>Casos de uso</strong></p>
-        <ul>
-            <li>Registrar daño en una parada</li>
-            <li>Consultar el estado de una estación</li>
-            <li>Visualizar inventario</li>
-        </ul>
-    </div>
-
-    <!-- ================= FASE 4 ================= -->
-
-    <div class="ejemplo">
-        <h3>Fase 4: Diseño de la solución</h3>
-
-        <p><strong>Wireframes</strong></p>
-        <p>
-            Se realizaron bocetos iniciales para definir la estructura, navegación y jerarquía visual
-            del sistema.
-        </p>
-
-        <p><strong>Prototipos en Figma</strong></p>
-        <p>
-            Se diseñaron prototipos de alta fidelidad en Figma para representar
-            la interfaz completa del sistema.
-        </p>
-
-        <p><strong>Arquitectura visual</strong></p>
-        <p>
-            El diseño se basa en un panel central con módulos independientes
-            para facilitar la navegación y el uso del sistema.
-        </p>
-    </div>
-
-    <!-- ================= ENTREGABLES ================= -->
-
-    <div class="ejercicio">
-        <h3>✅ Entregables del Examen</h3>
-
-        <ul>
-            <li>Página web con las 4 fases del proyecto</li>
-            <li>Diseño completo de la UI en Figma</li>
-            <li>Evidencias de aprobación del cliente</li>
-            <li>Enlace del proyecto de Figma</li>
-            <li>Video de respaldo de las actividades realizadas</li>
-        </ul>
-
-        <!-- ===== ENLACE FIGMA ===== -->
-
-        <p style="margin-top:20px;">
-            <strong>Enlace al proyecto Figma:</strong><br>
-            <a href="https://atom-block-48547580.figma.site/" target="_blank">
-                https://atom-block-48547580.figma.site/
-            </a>
-        </p>
-
-        <!-- ===== ENLACE VIDEO RESPALDO ===== -->
-
-        <p style="margin-top:20px;">
-            <strong>Enlace de respaldo de las actividades en Figma (Google Drive):</strong><br>
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1V8HdLIuEV--E-KDvoRs6_OdB3dU-0Dpv/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>    
-            🎥 Ver video de respaldo de las actividades
-            </a>
-        </p>
-
-        <!-- ===== IMÁGENES DE RESPALDO ===== -->
-
-        <p style="margin-top:25px;"><strong>Capturas de respaldo del diseño:</strong></p>
-
-        <img src="captura13.png" alt="Diseño Figma captura 13"
-             style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-        <img src="captura14.png" alt="Diseño Figma captura 14"
-             style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-        <img src="captura15.png" alt="Diseño Figma captura 15"
-             style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-        <img src="captura16.png" alt="Diseño Figma captura 16"
-             style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-        <img src="captura17.png" alt="Diseño Figma captura 17"
-             style="max-width:100%; height:auto; border-radius:8px; margin-top:15px;">
-
-        <p style="margin-top:20px;">
-            <strong>Nota:</strong> Este examen corresponde únicamente a la
-            <strong>fase de diseño</strong> del sistema. No incluye programación.
-            El diseño fue aprobado por el cliente antes de la entrega.
-        </p>
-    </div>
+</div>
 
 </section>
 
 <div style="margin:60px;text-align:center;">
-    <a href="index.html" class="button">⬅ Volver al Inicio</a>
+<a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<script>
+const imagenes = document.querySelectorAll(".imagen-poo");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
