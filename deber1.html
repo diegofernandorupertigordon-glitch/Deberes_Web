@@ -20,103 +20,30 @@
 
 <h2>1. ¿Qué son las sentencias de control?</h2>
 <p>
-Las sentencias de control son instrucciones que permiten dirigir el flujo de ejecución de un programa.
-Gracias a ellas, una aplicación puede tomar decisiones, repetir procesos y ejecutar acciones únicamente
-cuando se cumplen ciertas condiciones.
+Las sentencias de control son estructuras que permiten modificar el flujo normal
+de ejecución de un programa. Gracias a ellas, una aplicación puede tomar decisiones
+según condiciones lógicas y ejecutar diferentes bloques de código.
 </p>
 
 <p>
-En otras palabras, las sentencias de control hacen que el programa pueda decidir qué camino seguir
-y cuántas veces ejecutar una acción.
+Estas sentencias permiten validar datos, controlar accesos, evaluar resultados
+y manejar distintos escenarios dentro de una aplicación.
 </p>
 
 <!-- ================================================= -->
-<!-- 2. SINTAXIS DE LAS SENTENCIAS DE CONTROL -->
+<!-- 2. SINTAXIS -->
 <!-- ================================================= -->
 
-<h2>2. Sintaxis de las principales sentencias de control</h2>
+<h2>2. Sintaxis de las sentencias de control</h2>
 
 <div class="ejemplo">
-<h3>2.1 If / Else (Kotlin)</h3>
-<p>
-La estructura <strong>if / else</strong> en Kotlin permite ejecutar bloques de código
-según una condición lógica.
-</p>
-
+<h3>If / Else (Kotlin)</h3>
 <pre>
 if (condicion) {
-    // código si es verdadero
+    // código si la condición es verdadera
 } else {
-    // código si es falso
+    // código si la condición es falsa
 }
-</pre>
-
-<p><strong>Ejemplo:</strong></p>
-<pre>
-val edad = 20
-
-if (edad >= 18) {
-    println("Puede ingresar")
-} else {
-    println("No puede ingresar")
-}
-</pre>
-
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-Puede ingresar
-</pre>
-</div>
-
-<div class="ejemplo">
-<h3>2.2 Bucle For (Kotlin)</h3>
-<p>
-El bucle <strong>for</strong> en Kotlin se usa comúnmente con rangos numéricos.
-</p>
-
-<pre>
-for (i in inicio..fin) {
-    // código que se repite
-}
-</pre>
-
-<p><strong>Ejemplo:</strong></p>
-<pre>
-for (i in 1..5) {
-    println(i)
-}
-</pre>
-
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-1
-2
-3
-4
-5
-</pre>
-</div>
-
-<div class="ejemplo">
-<h3>2.3 Bucle While (Kotlin)</h3>
-<p>
-El bucle <strong>while</strong> ejecuta el código mientras la condición sea verdadera.
-</p>
-
-<pre>
-var contador = 1
-
-while (contador <= 3) {
-    println(contador)
-    contador++
-}
-</pre>
-
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-1
-2
-3
 </pre>
 </div>
 
@@ -126,79 +53,115 @@ while (contador <= 3) {
 
 <h2>3. Ejercicios prácticos (Kotlin)</h2>
 
+<!-- ================= EJERCICIO 1 ================= -->
+
 <div class="ejercicio">
-<h3>3.1 Ejercicio 1</h3>
+<h3>3.1 Ejercicio 1 – Cálculo de promedio académico</h3>
+
 <p>
-Crea un programa que determine si una persona puede votar según su edad.
+Este programa valida tres notas ingresadas por el estudiante, calcula el promedio
+y determina su estado académico.
 </p>
 
 <pre>
-val edad = 20
+val nota1 = 6
+val nota2 = 6
+val nota3 = 7
 
-if (edad >= 16) {
-    println("Puede votar")
+if (nota1 < 0 || nota1 > 10 ||
+    nota2 < 0 || nota2 > 10 ||
+    nota3 < 0 || nota3 > 10) {
+
+    println("Error: una o más notas son inválidas")
+
 } else {
-    println("No puede votar")
+
+    val promedio = (nota1 + nota2 + nota3) / 3.0
+
+    if (promedio >= 7) {
+        println("Promedio: $promedio - Estado: Aprobado")
+    } else if (promedio >= 5) {
+        println("Promedio: $promedio - Estado: Supletorio")
+    } else {
+        println("Promedio: $promedio - Estado: Reprobado")
+    }
 }
 </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-Puede votar
-</pre>
+<p><strong>Explicación del código:</strong></p>
+<p>
+Primero se declaran tres variables que representan las notas del estudiante.
+Luego se utiliza una sentencia <strong>if</strong> junto con el operador lógico
+<strong>OR (||)</strong> para verificar si alguna nota está fuera del rango permitido.
+</p>
+<p>
+Si alguna nota es inválida, se muestra un mensaje de error en Logcat.
+Si las notas son válidas, se calcula el promedio y se utiliza una estructura
+<strong>if / else if / else</strong> para determinar el estado académico del estudiante.
+</p>
 </div>
+
+<!-- ================= EJERCICIO 2 ================= -->
 
 <div class="ejercicio">
-<h3>3.2 Ejercicio 2</h3>
+<h3>3.2 Ejercicio 2 – Control de acceso por rol y edad</h3>
+
 <p>
-Crea un programa que muestre los números del 1 al 5 usando un bucle.
+Este programa evalúa el rol de un usuario y su edad para determinar el nivel
+de acceso dentro de una aplicación.
 </p>
 
 <pre>
-for (i in 1..5) {
-    println(i)
+val nombreUsuario = "Roberto"
+val rol = "admin"
+val edad = 18
+
+if (rol == "admin") {
+    println("Usuario $nombreUsuario: acceso total concedido")
+} else if (rol == "usuario") {
+    if (edad >= 18) {
+        println("Usuario $nombreUsuario: acceso permitido")
+    } else {
+        println("Usuario $nombreUsuario: acceso denegado por ser menor de edad")
+    }
+} else if (rol == "invitado") {
+    println("Usuario $nombreUsuario: acceso limitado")
+} else {
+    println("Rol no válido")
 }
 </pre>
 
-<p><strong>Resultado en pantalla:</strong></p>
-<pre>
-1
-2
-3
-4
-5
-</pre>
+<p><strong>Explicación del código:</strong></p>
+<p>
+Se definen variables para el nombre del usuario, su rol y su edad.
+Luego se utiliza una estructura <strong>if / else if</strong> para evaluar el tipo de rol.
+</p>
+<p>
+Si el rol es administrador, el acceso es total.
+Si el rol es usuario, se evalúa adicionalmente la edad usando un <strong>if anidado</strong>.
+Si es invitado, el acceso es limitado.
+Finalmente, si el rol no existe, se muestra un mensaje de error.
+</p>
 </div>
 
-<!-- ===== SUBTÍTULO DE EXPLICACIÓN ===== -->
-
-<h3>Explicación de los ejercicios</h3>
-<p>
-En el primer ejercicio se utilizó la sentencia de control <strong>if / else</strong> para
-evaluar la edad y determinar si una persona puede votar.  
-En el segundo ejercicio se empleó un bucle <strong>for</strong> para mostrar una secuencia
-de números de forma repetitiva.
-</p>
-
-<!-- ===== IMAGEN ===== -->
+<!-- ================================================= -->
+<!-- 4. EVIDENCIA Y VIDEO -->
+<!-- ================================================= -->
 
 <img src="captura11.png" alt="Ejecución de los ejercicios en Logcat"
-     style="max-width:100%; height:auto; border-radius:8px;">
-
-<!-- ================================================= -->
-<!-- 4. VIDEO EXPLICATIVO -->
-<!-- ================================================= -->
+     style="max-width:100%; height:auto; border-radius:8px; margin-top:20px;">
 
 <h2>4. Video explicativo</h2>
 <p>
 En el siguiente enlace se encuentra el video donde se explica paso a paso
-la resolución de los dos ejercicios prácticos, con cámara encendida.
+la resolución de ambos ejercicios prácticos, mostrando el código y su ejecución
+en Logcat, con cámara encendida.
 </p>
 
 <p>
 <strong>Enlace al video (Google Drive):</strong><br>
 <a href="https://drive.google.com/file/d/11y8mQfyMxAtNDAdh62bm7xlrLVwieRhE/view?usp=sharing" target="_blank">
-https://drive.google.com/file/d/11y8mQfyMxAtNDAdh62bm7xlrLVwieRhE/view
+Ver video explicativo
 </a>
 </p>
 
