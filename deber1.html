@@ -4,6 +4,31 @@
 <meta charset="UTF-8">
 <title>Deber 1 – Sentencias de Control</title>
 <link rel="stylesheet" href="css/estilos.css">
+
+<!-- ================= VISOR DE IMÁGENES ================= -->
+<style>
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.3);
+}
+</style>
+
 </head>
 <body>
 
@@ -13,10 +38,6 @@
 </div>
 
 <section class="contenido-deber">
-
-<!-- ================================================= -->
-<!-- 1. ¿QUÉ SON LAS SENTENCIAS DE CONTROL? -->
-<!-- ================================================= -->
 
 <h2>1. ¿Qué son las sentencias de control?</h2>
 <p>
@@ -29,10 +50,6 @@ según condiciones lógicas y ejecutar diferentes bloques de código.
 Estas sentencias permiten validar datos, controlar accesos, evaluar resultados
 y manejar distintos escenarios dentro de una aplicación.
 </p>
-
-<!-- ================================================= -->
-<!-- 2. SINTAXIS -->
-<!-- ================================================= -->
 
 <h2>2. Sintaxis de las sentencias de control</h2>
 
@@ -47,21 +64,10 @@ if (condicion) {
 </pre>
 </div>
 
-<!-- ================================================= -->
-<!-- 3. EJERCICIOS PRÁCTICOS -->
-<!-- ================================================= -->
-
 <h2>3. Ejercicios prácticos (Kotlin)</h2>
-
-<!-- ================= EJERCICIO 1 ================= -->
 
 <div class="ejercicio">
 <h3>3.1 Ejercicio 1 – Cálculo de promedio académico</h3>
-
-<p>
-Este programa valida tres notas ingresadas por el estudiante, calcula el promedio
-y determina su estado académico.
-</p>
 
 <pre>
 val nota1 = 6
@@ -87,29 +93,10 @@ if (nota1 < 0 || nota1 > 10 ||
     }
 }
 </pre>
-
-<p><strong>Explicación del código:</strong></p>
-<p>
-Primero se declaran tres variables que representan las notas del estudiante.
-Luego se utiliza una sentencia <strong>if</strong> junto con el operador lógico
-<strong>OR (||)</strong> para verificar si alguna nota está fuera del rango permitido.
-</p>
-<p>
-Si alguna nota es inválida, se muestra un mensaje de error en Logcat.
-Si las notas son válidas, se calcula el promedio y se utiliza una estructura
-<strong>if / else if / else</strong> para determinar el estado académico del estudiante.
-</p>
 </div>
-
-<!-- ================= EJERCICIO 2 ================= -->
 
 <div class="ejercicio">
 <h3>3.2 Ejercicio 2 – Control de acceso por rol y edad</h3>
-
-<p>
-Este programa evalúa el rol de un usuario y su edad para determinar el nivel
-de acceso dentro de una aplicación.
-</p>
 
 <pre>
 val nombreUsuario = "Roberto"
@@ -130,37 +117,16 @@ if (rol == "admin") {
     println("Rol no válido")
 }
 </pre>
-
-<p><strong>Explicación del código:</strong></p>
-<p>
-Se definen variables para el nombre del usuario, su rol y su edad.
-Luego se utiliza una estructura <strong>if / else if</strong> para evaluar el tipo de rol.
-</p>
-<p>
-Si el rol es administrador, el acceso es total.
-Si el rol es usuario, se evalúa adicionalmente la edad usando un <strong>if anidado</strong>.
-Si es invitado, el acceso es limitado.
-Finalmente, si el rol no existe, se muestra un mensaje de error.
-</p>
 </div>
 
-<!-- ================================================= -->
-<!-- 4. EVIDENCIA Y VIDEO -->
-<!-- ================================================= -->
+<h2>📸 Evidencias</h2>
 
-<img src="captura11.png" alt="Ejecución de los ejercicios en Logcat"
-     style="max-width:100%; height:auto; border-radius:8px; margin-top:20px;">
+<img src="captura11.png" class="zoomable"
+     style="max-width:100%; height:auto; border-radius:10px; cursor:zoom-in;">
 
-<h2>4. Video explicativo</h2>
+<h2>📹 Video explicativo</h2>
 <p>
-En el siguiente enlace se encuentra el video donde se explica paso a paso
-la resolución de ambos ejercicios prácticos, mostrando el código y su ejecución
-en Logcat, con cámara encendida.
-</p>
-
-<p>
-<strong>Enlace al video (Google Drive):</strong><br>
-<a href="https://drive.google.com/file/d/11y8mQfyMxAtNDAdh62bm7xlrLVwieRhE/view?usp=sharing" target="_blank">
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe src="https://drive.google.com/file/d/1xScUktSqsLcyQMROgAhl4WAfPqPm5PCY/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media" allowfullscreen> </iframe> </div>
 Ver video explicativo
 </a>
 </p>
@@ -170,6 +136,28 @@ Ver video explicativo
 <div style="margin:60px;text-align:center;">
 <a href="index.html" class="button">⬅ Volver al Inicio</a>
 </div>
+
+<!-- ================= VISOR ================= -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
+
+<script>
+const imagenes = document.querySelectorAll(".zoomable");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 </body>
 </html>
