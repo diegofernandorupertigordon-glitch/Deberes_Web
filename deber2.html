@@ -1,5 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+    <style>
+/* Visor de imágenes */
+#visor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+#visor img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.3);
+}
+</style>
+
 <head>
     <meta charset="UTF-8">
     <title>Deber 2 – Funciones</title>
@@ -32,6 +56,27 @@
         }
     </style>
 </head>
+<!-- Visor de imágenes -->
+<div id="visor" onclick="cerrarVisor()">
+    <img id="imagenVisor">
+</div>
+
+<script>
+const imagenes = document.querySelectorAll(".capturas img");
+const visor = document.getElementById("visor");
+const imagenVisor = document.getElementById("imagenVisor");
+
+imagenes.forEach(img => {
+    img.addEventListener("click", () => {
+        imagenVisor.src = img.src;
+        visor.style.display = "flex";
+    });
+});
+
+function cerrarVisor() {
+    visor.style.display = "none";
+}
+</script>
 
 <body>
 
