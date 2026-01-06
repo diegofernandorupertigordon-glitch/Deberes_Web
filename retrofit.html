@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="css/estilos.css">
 
 <style>
-/* Imagen premium tipo App Utility */
 .imagen-premium {
   width: 100%;
   max-width: 900px;
@@ -18,7 +17,6 @@
   padding: 10px;
 }
 
-/* Video embebido */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -26,7 +24,8 @@
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  margin-top: 20px;
+  margin: 30px auto 50px;
+  max-width: 900px;
 }
 
 .video-container iframe {
@@ -35,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: none;
 }
 </style>
 
@@ -49,15 +48,23 @@
 
 <section class="contenido-deber">
 
-  <!-- Imagen real de tu app -->
+  <!-- Evidencia visual -->
   <div class="ejemplo">
-    <h3>📱 Evidencia visual de la App</h3>
+    <h3>📱 Evidencia de la implementación</h3>
     <p>
-      La siguiente captura corresponde a la implementación real del consumo de APIs
+      Esta captura muestra el funcionamiento real del consumo de datos desde una API
       utilizando Retrofit dentro de la aplicación Utility.
     </p>
 
     <img src="captura24.png" alt="Captura Retrofit Utility" class="imagen-premium">
+
+    <!-- Video de Google Drive -->
+    <div class="video-container">
+      <iframe 
+        src="https://drive.google.com/file/d/1JBEQX26iuOtZbmZdsddb4_Gm2BFo8NMi/preview"
+        allow="autoplay">
+      </iframe>
+    </div>
   </div>
 
   <div class="ejemplo">
@@ -66,9 +73,7 @@
       Retrofit es una librería de Android que permite conectarse a servicios web (APIs REST)
       y obtener datos en formato JSON para convertirlos en objetos Kotlin.
     </p>
-
-    <img src="retrofit.png" alt="Retrofit"
-         style="max-width:600px; width:100%; display:block; margin:25px auto; border-radius:8px;">
+    <img src="retrofit.png" alt="Retrofit" style="max-width:600px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
   <div class="ejemplo">
@@ -77,9 +82,7 @@
       Una API es un servicio en Internet que entrega información a una aplicación.
       Android envía una solicitud y el servidor responde con datos.
     </p>
-
-    <img src="api.png" alt="API REST"
-         style="max-width:550px; width:100%; display:block; margin:25px auto; border-radius:8px;">
+    <img src="api.png" alt="API REST" style="max-width:550px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
   <div class="ejemplo">
@@ -88,9 +91,7 @@
       MVVM organiza el código en tres capas: Model, View y ViewModel.
       Esto evita mezclar la lógica con la interfaz.
     </p>
-
-    <img src="mvvm.png" alt="MVVM"
-         style="max-width:650px; width:100%; display:block; margin:25px auto; border-radius:8px;">
+    <img src="mvvm.png" alt="MVVM" style="max-width:650px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
   <div class="ejemplo">
@@ -99,9 +100,7 @@
       Hilt crea y administra automáticamente los objetos de Retrofit,
       Repository y ViewModel sin escribir código repetido.
     </p>
-
-    <img src="hilt.png" alt="Hilt"
-         style="max-width:600px; width:100%; display:block; margin:25px auto; border-radius:8px;">
+    <img src="hilt.png" alt="Hilt" style="max-width:600px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
   <div class="ejemplo">
@@ -110,9 +109,7 @@
       Las Coroutines ejecutan tareas en segundo plano para que la app no se congele
       mientras se descargan datos.
     </p>
-
-    <img src="coroutines.png" alt="Coroutines"
-         style="max-width:550px; width:100%; display:block; margin:25px auto; border-radius:8px;">
+    <img src="coroutines.png" alt="Coroutines" style="max-width:550px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
   <div class="ejemplo">
@@ -120,34 +117,7 @@
     <p>
       Así viajan los datos desde Internet hasta la pantalla del usuario.
     </p>
-
-    <img src="flujo.png" alt="Flujo Retrofit MVVM"
-         style="max-width:700px; width:100%; display:block; margin:25px auto; border-radius:8px;">
-  </div>
-
-  <!-- ================= ACTIVIDAD ================= -->
-
-  <div class="ejercicio">
-    <h3>Actividad práctica</h3>
-    <p>Responde en tu cuaderno:</p>
-    <pre>
-• ¿Qué es Retrofit?
-• ¿Qué hace el ViewModel?
-• ¿Para qué sirve Hilt?
-• ¿Por qué usar Coroutines?
-• ¿Por qué MVVM es importante?
-    </pre>
-
-    <p style="margin-top:15px;">
-      <strong>🎥 Video de respaldo (implementación real):</strong>
-    </p>
-
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/LOJEEXVrA0w" 
-        allowfullscreen>
-      </iframe>
-    </div>
+    <img src="flujo.png" alt="Flujo Retrofit MVVM" style="max-width:700px; width:100%; display:block; margin:25px auto; border-radius:8px;">
   </div>
 
 </section>
