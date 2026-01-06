@@ -4,6 +4,41 @@
 <meta charset="UTF-8">
 <title>Lección – Retrofit con MVVM y Hilt</title>
 <link rel="stylesheet" href="css/estilos.css">
+
+<style>
+/* Imagen premium tipo App Utility */
+.imagen-premium {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 25px auto;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  background: #020617;
+  padding: 10px;
+}
+
+/* Video embebido */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+
 </head>
 <body>
 
@@ -13,6 +48,17 @@
 </div>
 
 <section class="contenido-deber">
+
+  <!-- Imagen real de tu app -->
+  <div class="ejemplo">
+    <h3>📱 Evidencia visual de la App</h3>
+    <p>
+      La siguiente captura corresponde a la implementación real del consumo de APIs
+      utilizando Retrofit dentro de la aplicación Utility.
+    </p>
+
+    <img src="captura24.png" alt="Captura Retrofit Utility" class="imagen-premium">
+  </div>
 
   <div class="ejemplo">
     <h3>¿Qué es Retrofit?</h3>
@@ -93,11 +139,15 @@
     </pre>
 
     <p style="margin-top:15px;">
-      <strong>Video:</strong><br>
-      <a href="https://www.youtube.com/watch?v=LOJEEXVrA0w" target="_blank">
-        https://www.youtube.com/watch?v=LOJEEXVrA0w
-      </a>
+      <strong>🎥 Video de respaldo (implementación real):</strong>
     </p>
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/LOJEEXVrA0w" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
 </section>
